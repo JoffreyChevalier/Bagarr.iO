@@ -1,0 +1,29 @@
+Concept : 
+
+Site de création de tournoi personnalisé. On aurait la possiblité 
+mettre un pari au tournoi.  
+
+1/ on inscrit le nombre de participants 
+2/ nom du tournoi 
+3/ type de jeu (poker, fifa, UNO, Catane, Smash Bro...)
+4/ type de tournoi (direct, poule, classement...)
+5/ optionnel - déterminer un pari 
+	a - déterminer le nombre de gagnants / perdants (1, 2, 3...)
+	b - sélection du type pari (boisson, argent, gage...)
+
+
+Type de paris :
+* nombre de verres à boire 
+* argent 
+* gage 
+* passe le balais toute la semaine 
+
+
+Annexes : 
+possibilité de rajouter un joueur pendant la partie
+enregistrement des points pendant la partie 
+
+S1 Virginie
+S2 Joffrey
+S3 Carolina
+S4 Grischka
