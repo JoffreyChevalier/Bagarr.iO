@@ -17,5 +17,9 @@
   "devDependencies": {
     "concurrently": "^7.0.0",
     "husky": "^7.0.0"
+  },
+  "dependencies": {
+    "@dicebear/avatars": "^4.10.2",
+    "@dicebear/avatars-avataaars-sprites": "^4.10.2"
   }
 }

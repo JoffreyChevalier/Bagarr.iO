@@ -1,12 +1,10 @@
-import Home from "@pages/Home";
-
+import RandomAvatar from "./components/RandomAvatars";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <RandomAvatar />
     </div>
   );
 }
