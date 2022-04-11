@@ -12,11 +12,7 @@ function RandomAvatar() {
 
   return (
     <div>
-      <img
-        style={{ height: "200px", width: "200px" }}
-        src={newAvatar}
-        alt="Your avatar"
-      />
+      <img width="200" height="200" src={newAvatar} alt="Your avatar" />
       <button
         type="button"
         onClick={() => {
