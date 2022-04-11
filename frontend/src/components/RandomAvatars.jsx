@@ -18,6 +18,7 @@ function RandomAvatar() {
         alt="Your avatar"
       />
       <button
+        type="button"
         onClick={() => {
           setNewAvatar(refresh());
         }}
