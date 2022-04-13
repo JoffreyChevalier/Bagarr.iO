@@ -8,3 +8,33 @@
 .App div button {
   margin-top: 1rem;
 }
+
+div.navbar {
+  align-items: flex-end;
+  background-color: #8080806b;
+}
+
+.navbar nav {
+  display: flex;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.navbar a {
+  margin-left: 1.5rem;
+}
+
+div.footer {
+  align-items: flex-end;
+  background-color: #8080806b;
+}
+
+.footer nav {
+  display: flex;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.footer a {
+  margin-left: 1.5rem;
+}
