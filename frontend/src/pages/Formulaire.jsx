@@ -1,7 +1,7 @@
 function Formulaire() {
   return (
     <div>
-      <h1>ICI la page du Formulaire</h1>;
+      <h1>ICI la page du Formulaire</h1>
     </div>
   );
 }
