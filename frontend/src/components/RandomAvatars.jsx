@@ -11,7 +11,7 @@ function RandomAvatar() {
   const [newAvatar, setNewAvatar] = useState(refresh());
 
   return (
-    <div>
+    <div className="random-avatar">
       <img width="200" height="200" src={newAvatar} alt="Your avatar" />
       <button
         type="button"
