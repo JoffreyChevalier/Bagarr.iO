@@ -8,7 +8,7 @@ import Tournament from "@pages/Tournament";
 import PointGames from "@pages/PointGames";
 import FinalRanking from "@pages/FinalRanking";
 
-import Navbar from "@components/Navbar";
+import WorkingNavbar from "@components/WorkingNavbar";
 import Footer from "@components/Footer";
 
 import "./App.css";
@@ -16,7 +16,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <WorkingNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/formulaires" element={<Formulaire />} />
