@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import Home from "@pages/Home";
-import Formulaire from "@pages/Formulaire";
+import Formulaire from "@pages/Contact";
 import MentionsLegales from "@pages/Mentions Legales";
 import SetProperties from "@pages/SetProperties";
 import Tournament from "@pages/Tournament";
