@@ -7,20 +7,20 @@ function WorkingNavbar() {
         <h3 className="flex justify-center px-8 bg-black text-white text-xl">
           WorkingNavbar
         </h3>
-        <div className=" flex list-none mr-4  border-black">
-          <li className=" px-2 hover:bg-yellow-200">
+        <div className=" flex list-none mr-4 border-black">
+          <li className=" px-2 hover:bg-yellow-200 text-black">
             <NavLink to="/">Home</NavLink>
           </li>
-          <li className=" px-2 hover:bg-yellow-200">
+          <li className=" px-2 hover:bg-yellow-200 text-black">
             <NavLink to="/configurations">Configurations-Tournois</NavLink>
           </li>
-          <li className=" px-2 hover:bg-yellow-200">
+          <li className=" px-2 hover:bg-yellow-200 text-black">
             <NavLink to="/tournois">Tournois</NavLink>
           </li>
-          <li className=" px-2 hover:bg-yellow-200">
+          <li className=" px-2 hover:bg-yellow-200 text-black">
             <NavLink to="/classementpoint">Classement à Point</NavLink>
           </li>
-          <li className=" px-2 hover:bg-yellow-200">
+          <li className=" px-2 hover:bg-yellow-200 text-black">
             <NavLink to="/classementfinal">Classement-Final</NavLink>
           </li>
         </div>

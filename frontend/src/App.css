@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*************************************************************************
-*                          Random Avatar CSS
-**************************************************************************/
-* {
-  color: white;
-}
-
 body {
   background-color: #07004d;
 }
@@ -24,6 +17,11 @@ li,
 nav {
   font-family: "DM Sans", sans-serif;
 }
+
+/*************************************************************************
+*                          Random Avatar CSS
+**************************************************************************/
+
 .random-avatar {
   display: flex;
   flex-direction: column;
@@ -55,6 +53,7 @@ nav {
 }
 
 .mentions_legales {
+  color: white;
   font-family: "DM Sans", sans-serif;
   text-align: left;
 }
