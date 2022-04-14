@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/*************************************************************************
+*                          Random Avatar Navabar CSS
+**************************************************************************/
+
 .random-avatar {
   display: flex;
   flex-direction: column;
@@ -13,20 +17,9 @@
   margin-top: 1rem;
 }
 
-.navbar {
-  align-items: flex-end;
-  background-color: #8080806b;
-}
-
-.navbar nav {
-  display: flex;
-  margin-bottom: 1rem;
-  list-style: none;
-}
-
-.navbar a {
-  margin-left: 1.5rem;
-}
+/*************************************************************************
+*                          Footer Navabar CSS
+**************************************************************************/
 
 .footer {
   align-items: flex-end;
