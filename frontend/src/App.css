@@ -3,9 +3,27 @@
 @tailwind utilities;
 
 /*************************************************************************
-*                          Random Avatar Navabar CSS
+*                          Random Avatar CSS
 **************************************************************************/
+* {
+  color: white;
+}
 
+body {
+  background-color: #07004d;
+}
+
+h1 {
+  font-family: "Bungee Shade", cursive;
+}
+
+p,
+h2,
+h3,
+li,
+nav {
+  font-family: "DM Sans", sans-serif;
+}
 .random-avatar {
   display: flex;
   flex-direction: column;
@@ -18,7 +36,7 @@
 }
 
 /*************************************************************************
-*                          Footer Navabar CSS
+*                          Footer CSS
 **************************************************************************/
 
 .footer {
@@ -34,4 +52,23 @@
 
 .footer a {
   margin-left: 1.5rem;
+}
+
+.mentions_legales {
+  font-family: "DM Sans", sans-serif;
+  text-align: left;
+}
+
+.mentions_legales h1 {
+  margin: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.mentions_legales h2 {
+  margin-top: 2rem;
+}
+
+.mentions_legales p {
+  padding: 1rem;
 }
