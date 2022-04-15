@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  color: white;
-}
-
 body {
   background-color: #07004d;
 }
@@ -22,6 +18,10 @@ nav {
   font-family: "DM Sans", sans-serif;
 }
 
+/*************************************************************************
+*                          Random Avatar CSS
+**************************************************************************/
+
 .random-avatar {
   display: flex;
   flex-direction: column;
@@ -33,20 +33,9 @@ nav {
   margin-top: 1rem;
 }
 
-.navbar {
-  align-items: flex-end;
-  background-color: #8080806b;
-}
-
-.navbar nav {
-  display: flex;
-  margin-bottom: 1rem;
-  list-style: none;
-}
-
-.navbar a {
-  margin-left: 1.5rem;
-}
+/*************************************************************************
+*                          Footer CSS
+**************************************************************************/
 
 .footer {
   align-items: flex-end;
@@ -64,6 +53,7 @@ nav {
 }
 
 .mentions_legales {
+  color: white;
   font-family: "DM Sans", sans-serif;
   text-align: left;
 }
