@@ -1,0 +1,11 @@
+fichier récap charte graphique
+
+-----------
+
+liste des composants :
+- boutons ronds 
+- input saisie de texte
+- input menu déroulant
+- bouton suivant et précédent
+- navbarre + bouton navbarre
+- formulaire
