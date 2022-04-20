@@ -71,3 +71,26 @@ nav {
 .mentions_legales p {
   padding: 1rem;
 }
+
+.minus_button,
+.plus_button {
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: rgb(128, 128, 128);
+  background-color: rgb(4, 57, 94);
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 50%;
+}
+
+.button_players {
+  justify-content: center;
+  align-items: baseline;
+}
+
+option:focus {
+  text-align: center;
+}

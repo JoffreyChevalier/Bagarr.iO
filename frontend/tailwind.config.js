@@ -6,6 +6,8 @@ module.exports = {
         prim_color: "#07004D",
         second_color: "#BA8208",
         third_color: "#9A373F",
+        lighter_dark_blue: "#04395E",
+        light_grey_button: "#808080",
       },
     },
     extend: {},
