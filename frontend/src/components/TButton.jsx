@@ -4,8 +4,8 @@ import React from "react";
 
 function variantClassName(variant) {
   return {
-    primary: "bg-[#70A288]",
-    secondary: "bg-[#04395E] border-[#808080]",
+    primary: "bg-[#04395E]",
+    secondary: "bg-[#9A373F] border-[#808080]",
     transparent: "bg-transparent shadow-none",
   }[variant];
 }
