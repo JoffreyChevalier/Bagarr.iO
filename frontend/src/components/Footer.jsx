@@ -2,17 +2,17 @@ import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="footer">
-      <nav>
-        <li>Copyright BagarreIO</li>
+    <footer className="footer">
+      <ul className="formlegales">
+        <li>© 2022 Copyright.</li>
         <li>
           <NavLink to="/formulaires">Contact</NavLink>
         </li>
         <li>
           <NavLink to="/mentionslegales">Mentions Légales</NavLink>
         </li>
-      </nav>
-    </div>
+      </ul>
+    </footer>
   );
 }
 
