@@ -1,0 +1,63 @@
+# CREER UN TOURNOI 
+POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments.json
+content-type: application/json
+
+{"name": "Tournoi "}
+
+###
+
+# AJOUTER UN PARTICIPANT AU TOURNOI
+POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11067579/participants.json
+content-type: application/json
+
+{
+  "name": "Gatsby"
+}
+
+###
+
+# OUVRIR LE CHECK-IN DU TOURNOI
+POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11067579/process_check_ins.json
+content-type: application/json
+
+###
+
+# CHECK-IN PARTICIPANTS
+POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11067579/participants/169613836/check_in.json
+content-type: application/json
+
+###
+
+#DEMARRER LE TOURNOI
+POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11067579/start.json
+content-type: application/json
+
+###
+
+#AFFICHER LES MATCHS DU TOURNOI
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11067579/matches.json
+
+###
+
+#AFFICHER LE MATCH 
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11067579/matches/273347129.json
+
+###
+
+# LISTE DE TOUS LES TOURNOIS
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments.json
+
+###
+
+# LISTE DES PARTICIPANTS A UN TOURNOI
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11067579/participants.json
+
+###
+
+#RETROUVER LES TOURNOIS
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments.json
+
+###
+
+#EFFACER UN TOURNOI 
+ DELETE https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11067561.json

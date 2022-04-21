@@ -69,6 +69,7 @@ Présentation orale :
 - [Trello](https://trello.com/b/H2hm9zwu/projet-2) 
 - [API avatars](https://getavataaars.com/) 
 - [API gestion de tournois](https://developer.toornament.com/v2/overview/get-started) 
+- [API gestion de tournois](https://challonge.com/fr) 
 
 
 ## Gestion du projet

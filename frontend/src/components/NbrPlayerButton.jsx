@@ -36,14 +36,14 @@ export default function NbrPlayerButton({ minValue = 1, maxValue = 10 }) {
       text-base
       font-normal
       text-white
-      bg-lighter_dark_blue bg-clip-padding bg-no-repeat
-      border border-solid border-light_grey_button
+      bg-button_bg bg-clip-padding bg-no-repeat
+      border border-solid border-border_button
       rounded
       transition
       ease-in-out
       m-0
       text-center
-      focus:text-white focus:bg-red focus:border-light_grey_button focus:outline-none focus:text-center"
+      focus:text-white focus:bg-red focus:border-border_button focus:outline-none focus:text-center"
             aria-label="Default select example"
           >
             {Array.from({ length: maxValue + 1 }, (_, i) => i + minValue).map(

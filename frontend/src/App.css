@@ -38,20 +38,26 @@ nav {
 **************************************************************************/
 
 .footer {
-  align-items: flex-end;
-  background-color: #8080806b;
+  background-color: #9a373f;
+  border-top: 2px solid #9a373f;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
-.footer nav {
+.footer {
+  color: white;
+  font-size: 15px;
+}
+
+.footer ul {
+  margin: 15px;
+}
+
+.formlegales {
   display: flex;
-  margin-bottom: 1rem;
-  list-style: none;
+  justify-content: space-around;
 }
-
-.footer a {
-  margin-left: 1.5rem;
-}
-
 .mentions_legales {
   color: white;
   font-family: "DM Sans", sans-serif;
@@ -71,6 +77,10 @@ nav {
 .mentions_legales p {
   padding: 1rem;
 }
+
+/*************************************************************************
+*                          NbrPlayerButton
+**************************************************************************/
 
 .minus_button,
 .plus_button {
@@ -93,4 +103,23 @@ nav {
 
 option:focus {
   text-align: center;
+}
+
+/*************************************************************************
+*                          Home CSS
+**************************************************************************/
+
+.acroche h1 {
+  text-align: center;
+  color: white;
+  margin: 2rem;
+  font-size: 2rem;
+}
+
+.acroche h2 {
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 40%;
 }
