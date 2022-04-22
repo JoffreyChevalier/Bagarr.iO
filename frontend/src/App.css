@@ -121,5 +121,22 @@ option:focus {
   display: block;
   text-align: center;
   margin: 0 auto;
-  max-width: 40%;
+  max-width: 60%;
+}
+
+/*************************************************************************
+*                          Media queries
+**************************************************************************/
+@media (max-width: 400px) {
+  .formlegales {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 700px) {
+  .formlegales {
+    display: flex;
+    justify-content: space-around;
+  }
 }
