@@ -43,9 +43,9 @@ nav {
   position: fixed;
   width: 100%;
   bottom: 0;
-}
-
-.footer {
+  height: 2rem;
+  display: flex;
+  align-items: center;
   color: white;
   font-size: 15px;
 }

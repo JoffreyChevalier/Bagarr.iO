@@ -27,7 +27,6 @@ function App() {
         <Route path="/classementfinal" element={<FinalRanking />} />
         <Route path="/test" element={<ComponentsTest />} />
       </Routes>
-      <Footer />
     </div>
   );
 }
