@@ -1,6 +1,7 @@
 import ModalHint from "@components/ModalHint";
 import TButton from "@components/TButton";
 import Footer from "@components/Footer";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -23,13 +24,15 @@ function Home() {
             </h2>
           </div>
           <div className="flex justify-center py-8">
-            <TButton
-              variant="secondary"
-              rounded
-              buttonClass="text-[##FFFFFF] h-24 w-24 text-xl"
-            >
-              Créer mon tournoi
-            </TButton>
+            <Link to="/configurations">
+              <TButton
+                variant="secondary"
+                rounded
+                buttonClass="text-[##FFFFFF] h-24 w-24 text-xl"
+              >
+                Créer mon tournoi
+              </TButton>
+            </Link>
           </div>
           <div className="flex justify-center">
             <ModalHint />
