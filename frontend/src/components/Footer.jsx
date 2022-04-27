@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
-      <ul className="formlegales">
+      <ul className="formlegales m-">
         <li>
           <NavLink to="/formulaires">Contact</NavLink>
         </li>

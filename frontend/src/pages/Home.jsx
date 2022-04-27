@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
+
 import ModalHint from "@components/ModalHint";
 import TButton from "@components/TButton";
 import Footer from "@components/Footer";
-import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -24,7 +25,7 @@ function Home() {
             </h2>
           </div>
           <div className="flex justify-center py-8">
-            <Link to="/configurations">
+            <Link to="/creer-un-tournoi">
               <TButton
                 variant="secondary"
                 rounded
