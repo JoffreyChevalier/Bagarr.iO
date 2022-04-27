@@ -1,4 +1,3 @@
-import TextInput from "@components/TextInput";
 import TButton from "@components/TButton";
 import createTournament from "@services/api";
 import { Link } from "react-router-dom";
@@ -19,7 +18,6 @@ export default function ComponentsTest() {
       <h1 className="mainTitle">Page de tests</h1>
       <div>
         {/* Bouton nom de l'équipe, on fait passer la props onChange avec setData pour récupérer la saisie de l'utilisateur */}
-        <TextInput inputName="Nom du tournois" />
 
         <TButton
           variant="transparent"

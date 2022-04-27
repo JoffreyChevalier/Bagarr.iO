@@ -1,12 +1,12 @@
-export default function TextInput({ textValue, inputName }) {
+export default function GameType({ setTournamentName }) {
   return (
     <div className="flex button_players">
       <div className="flex justify-center">
         <div className="mb-3 xl:w-40">
           {/* On fait passer les données la saisie de l'utilisateur via la props onChange */}
           <input
-            onChange={(event) => textValue(event.target.value)}
-            placeholder={inputName}
+            onChange={(event) => setTournamentName(event.target.value)}
+            placeholder="Nom du tournoi"
             className="form-select appearance-none
         block
         w-full
