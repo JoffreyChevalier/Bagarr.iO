@@ -13,6 +13,7 @@ function variantClassName(variant) {
 // fonction bouton qui permet de styliser les boutons avec des variables
 
 export default function TButton({
+  onClick,
   rounded = false,
   variant = "primary",
   icon = null,
@@ -22,6 +23,7 @@ export default function TButton({
   return (
     <button
       type="button"
+      onClick={onClick}
       className={`flex items-center justify-center border border-transparent shadow-sm text-sm leading-4 font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 
       ${rounded ? "p-2 rounded-full" : "px-3 py-2 rounded-md"} 
       ${buttonClass} 

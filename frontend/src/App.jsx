@@ -9,7 +9,6 @@ import PointGames from "@pages/PointGames";
 import FinalRanking from "@pages/FinalRanking";
 import ComponentsTest from "@pages/ComponentsTest";
 import WorkingNavbar from "@components/WorkingNavbar";
-import Footer from "@components/Footer";
 
 import "./App.css";
 
