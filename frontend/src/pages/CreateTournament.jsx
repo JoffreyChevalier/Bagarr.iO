@@ -33,7 +33,7 @@ function CreateTournament() {
 
   return (
     <body className="flex justify-center">
-      <div className="max-w-fit text-white text-4xl relative block bg-prim_color p-8 border border-gray-100 shadow-xl rounded-xl m-6">
+      <div className="backdrop-brightness-150 max-w-fit text-white text-4xl relative block p-8 border border-gray-100 shadow-xl rounded-xl m-6">
         <h1 className="mb-8">
           GESTION DU TOURNOI ({tournamentName} {step}/3 )
         </h1>
