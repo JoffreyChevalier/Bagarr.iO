@@ -1,4 +1,4 @@
-export default function TournamentName({ name, onChange }) {
+export default function PlayerName({ name, onChangeName }) {
   return (
     <div className="flex button_players">
       <div className="flex justify-center">
@@ -6,8 +6,8 @@ export default function TournamentName({ name, onChange }) {
           {/* On fait passer les données la saisie de l'utilisateur via la props onChange */}
           <input
             value={name}
-            onChange={(event) => onChange(event.target.value)}
-            placeholder="Nom du tournoi"
+            onChange={(event) => onChangeName(event.target.value)}
+            placeholder="Nom du joueur"
             className="form-select appearance-none
         block
         w-full

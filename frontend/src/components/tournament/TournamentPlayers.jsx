@@ -1,30 +1,41 @@
-import NbrPlayerButton from "@components/NbrPlayerButton";
-import { ArrowRightIcon as ArrowRightIconOutline } from "@heroicons/react/outline";
+import RandomAvatar from "@components/RandomAvatars";
+import { useState } from "react";
+import PlayerName from "./PlayerName";
 
 function TournamentPlayers({ players, onChange }) {
-  // TODO: Ajouter les participants ici
-  // le tableau des participants (useState)
+  const [newPlayerName, setNewPlayerName] = useState("");
+  const [newPlayerAvatar, setNewPlayerAvatar] = useState("");
+
+  function onNewPlayerCreated() {
+    onChange([...players, { name: newPlayerName, misc: newPlayerAvatar }]);
+    setNewPlayerAvatar("");
+    setNewPlayerName("");
+  }
+
   return (
     <div>
       <h1 className="mainTitle">ICI la page d'ajout de participants</h1>
-      <NbrPlayerButton minValue={1} maxValue={36} />
-      <ArrowRightIconOutline className="h-5 w-5 text-[#70A288]" />
 
-      <button
-        type="button"
-        onClick={() =>
-          onChange([
-            ...players,
-            { name: `player-${Math.ceil(Math.random() * 100)}` },
-          ])
-        }
-      >
+      <PlayerName name={newPlayerName} onChangeName={setNewPlayerName} />
+      <RandomAvatar onChange={setNewPlayerAvatar} />
+
+      <button type="button" onClick={onNewPlayerCreated}>
         ADD
       </button>
 
-      {players.map((player) => (
-        <p>{player.name}</p>
-      ))}
+      <div className="flex flex-wrap gap-4">
+        {players.map((player) => (
+          <div>
+            <img
+              width="100"
+              height="100"
+              src={player.misc}
+              alt={`${player.name} avatar`}
+            />
+            <p>{player.name}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
