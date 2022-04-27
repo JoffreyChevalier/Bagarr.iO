@@ -32,32 +32,35 @@ function CreateTournament() {
   }
 
   return (
-    <div className="text-white text-4xl">
-      <h1>
-        GESTION DU TOURNOI ({tournamentName} {step}/3 )
-      </h1>
+    <body className="flex justify-center">
+      <div className="max-w-fit text-white text-4xl relative block bg-prim_color p-8 border border-gray-100 shadow-xl rounded-xl m-6">
+        <h1 className="mb-8">
+          GESTION DU TOURNOI ({tournamentName} {step}/3 )
+        </h1>
 
-      {step === 1 && (
-        <TournamentName name={tournamentName} onChange={setTournamentName} />
-      )}
+        {step === 1 && (
+          <TournamentName name={tournamentName} onChange={setTournamentName} />
+        )}
 
-      {step === 2 && (
-        <TournamentPlayers
-          players={tournamentPlayers}
-          onChange={setTournamentPlayers}
-        />
-      )}
+        {step === 2 && (
+          <TournamentPlayers
+            players={tournamentPlayers}
+            onChange={setTournamentPlayers}
+          />
+        )}
 
-      {step === 3 && <FinalizeTournament />}
+        {step === 3 && <FinalizeTournament />}
+        <div className="flex justify-center">
+          <button type="button" onClick={onPrevStep} className="m-5">
+            PREV
+          </button>
 
-      <button type="button" onClick={onPrevStep}>
-        PREV
-      </button>
-
-      <button type="button" onClick={onNextStep}>
-        NEXT
-      </button>
-    </div>
+          <button type="button" onClick={onNextStep} className="m-5">
+            NEXT
+          </button>
+        </div>
+      </div>
+    </body>
   );
 }
 
