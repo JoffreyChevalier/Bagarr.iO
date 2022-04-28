@@ -16,6 +16,9 @@ function CreateTournament() {
   // TODO: Gérer les bornes
   // Au clic sur PREV MàJ du numéro d'étape (-1)
   function onPrevStep() {
+    if (step <= 1) {
+      return;
+    }
     setStep(step - 1);
   }
 
@@ -28,6 +31,9 @@ function CreateTournament() {
       // appel api ajout des participants
     } else if (step === 3) {
       // ???
+    }
+    if (step >= 3) {
+      return;
     }
 
     setStep(step + 1);
@@ -57,13 +63,23 @@ function CreateTournament() {
         {step === 3 && <FinalizeTournament />}
 
         {/* boutons pour changer d'étape */}
-        <button type="button" onClick={onPrevStep}>
-          PREV
-        </button>
+        <div className="flex justify-center my-8">
+          <button
+            className="p-4 mx-8 items-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-[#9A373F] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            type="button"
+            onClick={onPrevStep}
+          >
+            PREV
+          </button>
 
-        <button type="button" onClick={onNextStep}>
-          NEXT
-        </button>
+          <button
+            className="p-4 mx-8 items-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-[#9A373F] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            type="button"
+            onClick={onNextStep}
+          >
+            NEXT
+          </button>
+        </div>
       </div>
     </body>
   );

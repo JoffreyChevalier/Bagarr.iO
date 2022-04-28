@@ -17,8 +17,12 @@ function RandomAvatar({ onChange }) {
   return (
     <div className="random-avatar">
       <img width="200" height="200" src={newAvatar} alt="Your avatar" />
-      <button type="button" onClick={() => setNewAvatar(refresh())}>
-        Randomize
+      <button
+        className="p-4 mx-8 items-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-[#9A373F] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        type="button"
+        onClick={() => setNewAvatar(refresh())}
+      >
+        Avatar suivant...
       </button>
     </div>
   );
