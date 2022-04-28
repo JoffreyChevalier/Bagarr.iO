@@ -28,13 +28,11 @@ function Tournament() {
           <p>Chargement de la liste des tournois ...</p>
         )}
       </div>
-      <div className="backdrop-brightness-150 max-w-fit text-white text-4xl relative block p-8 border border-gray-100 shadow-xl rounded-xl m-6">
-        <h1>16eme-8eme-quarts-demi-final</h1>
-        <TournamentCard />
-        <TournamentCard />
-        <TournamentCard />
-        <TournamentCard />
-        <TournamentCard />
+      <div>
+        <div className="flex-col items-center backdrop-brightness-150 max-w-fit text-white text-4xl relative block p-8 border border-gray-100 shadow-xl rounded-xl m-6">
+          <h1>16eme-8eme-quarts-demi-final</h1>
+          <TournamentCard />
+        </div>
       </div>
     </>
   );
