@@ -1,6 +1,6 @@
 function MentionsLegales() {
   return (
-    <div className="mentions_legales ">
+    <div className="mentions_legales">
       <h1>Mentions légales</h1>
       <h2>ARTICLE 1 : Les mentions légales</h2>
       <p>

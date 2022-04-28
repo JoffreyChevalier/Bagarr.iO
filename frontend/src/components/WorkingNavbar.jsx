@@ -12,7 +12,7 @@ function WorkingNavbar() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li className=" px-2 hover:bg-yellow-200 text-black">
-            <NavLink to="/configurations">Configurations-Tournois</NavLink>
+            <NavLink to="/creer-un-tournoi">Configurations-Tournois</NavLink>
           </li>
           <li className=" px-2 hover:bg-yellow-200 text-black">
             <NavLink to="/tournois">Tournois</NavLink>

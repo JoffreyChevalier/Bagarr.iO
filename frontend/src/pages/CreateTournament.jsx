@@ -34,36 +34,38 @@ function CreateTournament() {
   }
 
   return (
-    <div className="text-white text-4xl">
-      <h1>
-        GESTION DU TOURNOI ({tournamentName} {step}/3 )
-      </h1>
+    <body className="flex justify-center">
+      <div className="backdrop-brightness-150 max-w-fit text-white text-4xl relative block p-8 border border-gray-100 shadow-xl rounded-xl m-6">
+        <h1 className="mb-8">
+          GESTION DU TOURNOI ({tournamentName} {step}/3 )
+        </h1>
 
-      {/* A la 1ere étape on appelle TournamentName pour inscrire le nom du tournoi */}
-      {step === 1 && (
-        <TournamentName name={tournamentName} onChange={setTournamentName} />
-      )}
+        {/* A la 1ere étape on appelle TournamentName pour inscrire le nom du tournoi */}
+        {step === 1 && (
+          <TournamentName name={tournamentName} onChange={setTournamentName} />
+        )}
 
-      {/* A la 2nde étape on appelle TournamentPlayers pour inscrire le nom et l'avatar du joueur */}
-      {step === 2 && (
-        <TournamentPlayers
-          players={tournamentPlayers}
-          onChange={setTournamentPlayers}
-        />
-      )}
+        {/* A la 2nde étape on appelle TournamentPlayers pour inscrire le nom et l'avatar du joueur */}
+        {step === 2 && (
+          <TournamentPlayers
+            players={tournamentPlayers}
+            onChange={setTournamentPlayers}
+          />
+        )}
 
-      {/* A la 3eme étape on appelle FinalizeTournament pour afficher le récapitulatif du tournoi */}
-      {step === 3 && <FinalizeTournament />}
+        {/* A la 3eme étape on appelle FinalizeTournament pour afficher le récapitulatif du tournoi */}
+        {step === 3 && <FinalizeTournament />}
 
-      {/* boutons pour changer d'étape */}
-      <button type="button" onClick={onPrevStep}>
-        PREV
-      </button>
+        {/* boutons pour changer d'étape */}
+        <button type="button" onClick={onPrevStep}>
+          PREV
+        </button>
 
-      <button type="button" onClick={onNextStep}>
-        NEXT
-      </button>
-    </div>
+        <button type="button" onClick={onNextStep}>
+          NEXT
+        </button>
+      </div>
+    </body>
   );
 }
 

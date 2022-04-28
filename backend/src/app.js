@@ -31,7 +31,7 @@ app.use(
   /\/tournaments.*/g,
   createProxyMiddleware({
     target: "https://api.challonge.com/v1",
-    auth: "GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE", // TODO à mettre dans le .env
+    auth: process.env.API_KEY,
     changeOrigin: true,
   })
 );
