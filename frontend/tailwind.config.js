@@ -8,6 +8,7 @@ module.exports = {
         third_color: "#9A373F",
         button_bg: "#04395E",
         border_button: "#808080",
+        red_customized: "#04395E",
       },
     },
   },

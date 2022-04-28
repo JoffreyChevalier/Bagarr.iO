@@ -6,10 +6,6 @@ body {
   background-color: #07004d;
 }
 
-h1 {
-  font-family: "Bungee Shade", cursive;
-}
-
 p,
 h2,
 h3,
@@ -121,6 +117,7 @@ option:focus {
 **************************************************************************/
 
 .acroche h1 {
+  font-family: "Bungee Shade", cursive;
   text-align: center;
   color: white;
   margin: 2rem;
@@ -149,4 +146,18 @@ option:focus {
   .formlegales {
     font-size: x-small;
   }
+}
+
+/*************************************************************************
+*                          CreateTournament
+**************************************************************************/
+
+.createTournamentBlock {
+  margin-bottom: 55px;
+}
+
+.addPlayerButton {
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
 }

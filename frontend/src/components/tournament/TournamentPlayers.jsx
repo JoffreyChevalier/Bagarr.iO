@@ -14,14 +14,20 @@ function TournamentPlayers({ players, onChange }) {
 
   return (
     <div>
-      <h1 className="mainTitle">ICI la page d'ajout de participants</h1>
+      <h1 className="mainTitle mb-8 text-center">Joueur</h1>
 
       <PlayerName name={newPlayerName} onChangeName={setNewPlayerName} />
       <RandomAvatar onChange={setNewPlayerAvatar} />
 
-      <button type="button" onClick={onNewPlayerCreated}>
-        ADD
-      </button>
+      <div className="flex justify-center mt-8">
+        <button
+          type="button"
+          className="addPlayerButton flex items-center justify-center border border-transparent shadow-sm text-sm leading-4 font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 p-2 rounded-full bg-[#9A373F] border-[#808080]"
+          onClick={onNewPlayerCreated}
+        >
+          AJOUTER UN JOUEUR
+        </button>
+      </div>
 
       <div className="flex flex-wrap gap-4">
         {players.map((player) => (
