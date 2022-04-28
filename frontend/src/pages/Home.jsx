@@ -12,7 +12,7 @@ function Home() {
           <div className="flex justify-center py-8 ">
             <img
               className="h-32 sm:h-48"
-              src="./src/assets/logo poing.png"
+              src="./src/assets/logo.png"
               alt="logo d'un point"
             />
           </div>

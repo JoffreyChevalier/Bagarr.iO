@@ -12,7 +12,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App m-0 bg-[url('/img/hero-pattern.svg')]">
       <WorkingNavbar />
 
       <Routes>
