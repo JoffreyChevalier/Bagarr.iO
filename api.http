@@ -18,6 +18,23 @@ content-type: application/json
 
 ###
 
+# AJOUTER LES PARTICIPANTS EN MASSE 
+POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11097520/participants/bulk_add.json
+content-type: application/json
+
+{
+  "participants": [
+    {
+      "name": "grish"
+    },
+    {
+      "name": "vins"
+    }
+  ]
+}
+
+###
+
 # RENDRE LES PARTICIPANTS ACTIFS SANS CHECK-IN
 POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11068133/abort_check_in.json
 content-type: application/json
@@ -62,15 +79,12 @@ content-type: application/json
 }
 }
 
-# {"match":
-# {"player1_scores":["1"],"player2_scores":["2"],"winner_id":169624656,"loser_id":169624602,"is_tie":false, "scores_csv":"3-1"}}
-
 ###
 
 # CLOTURER LE TOURNOI
 POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11072182/finalize.json
 
-
+###
 
 # NE PLUS MARQUER LE MATCH COMME EN COURS
 POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11068133/matches/273361822/unmark_as_underway.json
@@ -97,3 +111,5 @@ GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v
 
 # EFFACER UN TOURNOI 
 DELETE https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11068130.json
+
+###

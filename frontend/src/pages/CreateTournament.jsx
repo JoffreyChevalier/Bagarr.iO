@@ -3,6 +3,7 @@ import { useState } from "react";
 import TournamentName from "@components/tournament/TournamentName";
 import TournamentPlayers from "@components/tournament/TournamentPlayers";
 import FinalizeTournament from "@components/tournament/FinalizeTournament";
+import { createTournamentApi, addMassPlayers } from "@services/api";
 
 // function FinalizeTournament() {
 //   return <h1>ETAPE 3</h1>;
@@ -12,8 +13,8 @@ function CreateTournament() {
   const [step, setStep] = useState(1);
   const [tournamentName, setTournamentName] = useState("");
   const [tournamentPlayers, setTournamentPlayers] = useState([]);
+  const [tournament, setTournament] = useState();
 
-  // TODO: Gérer les bornes
   // Au clic sur PREV MàJ du numéro d'étape (-1)
   function onPrevStep() {
     if (step <= 1) {
@@ -21,14 +22,17 @@ function CreateTournament() {
     }
     setStep(step - 1);
   }
-
   // TODO: Gérer les bornes
   // Au clic sur PREV MàJ du numéro d'étape (+1)
-  function onNextStep() {
+  async function onNextStep() {
     if (step === 1) {
       // appel api pour créer le tournoi
+      const response = await createTournamentApi({ name: tournamentName });
+      setTournament(response.tournament);
     } else if (step === 2) {
-      // appel api ajout des participants
+      // appel api ajout des joueurs
+      const response = await addMassPlayers(tournament, tournamentPlayers);
+      console.warn(response);
     } else if (step === 3) {
       // ???
     }
