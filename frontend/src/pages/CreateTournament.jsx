@@ -55,15 +55,16 @@ function CreateTournament() {
 
         {/* A la 3eme étape on appelle FinalizeTournament pour afficher le récapitulatif du tournoi */}
         {step === 3 && <FinalizeTournament />}
+        <div className="flex justify-center">
+          {/* boutons pour changer d'étape */}
+          <button type="button" className="m-5" onClick={onPrevStep}>
+            PREV
+          </button>
 
-        {/* boutons pour changer d'étape */}
-        <button type="button" onClick={onPrevStep}>
-          PREV
-        </button>
-
-        <button type="button" onClick={onNextStep}>
-          NEXT
-        </button>
+          <button type="button" className="m-5" onClick={onNextStep}>
+            NEXT
+          </button>
+        </div>
       </div>
     </body>
   );
