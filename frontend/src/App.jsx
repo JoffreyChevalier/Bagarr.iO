@@ -7,6 +7,7 @@ import Tournament from "@pages/Tournament";
 import FinalRanking from "@pages/FinalRanking";
 import WorkingNavbar from "@components/WorkingNavbar";
 import CreateTournament from "@pages/CreateTournament";
+import Timer from "@pages/Timer";
 
 import "./App.css";
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/tournois" element={<Tournament />} />
         <Route path="/classementfinal" element={<FinalRanking />} />
         <Route path="/creer-un-tournoi" element={<CreateTournament />} />
+        <Route path="/timer" element={<Timer />} />
       </Routes>
     </div>
   );
