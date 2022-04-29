@@ -6,6 +6,7 @@ function TournamentPlayers({ players, onChange }) {
   const [newPlayerName, setNewPlayerName] = useState("");
   const [newPlayerAvatar, setNewPlayerAvatar] = useState("");
 
+  // Lorsque le joueur est créé au clic du bouton, on créé un nouveau tableau qui reprend les joueurs et on y ajoute le nouveau joueur
   function onNewPlayerCreated() {
     onChange([...players, { name: newPlayerName, misc: newPlayerAvatar }]);
     setNewPlayerAvatar("");
@@ -14,31 +15,35 @@ function TournamentPlayers({ players, onChange }) {
 
   return (
     <div>
-      <h1 className="mainTitle mb-8 text-center">Joueur</h1>
+      <div className="mb-8">
+        {/* On fait passer le nom la saisie de l'utilisateur via la props onChange */}
+        <PlayerName name={newPlayerName} onChangeName={setNewPlayerName} />
+      </div>
+      {/* <h1 className="mainTitle mb-8 text-center">Joueur</h1> */}
 
-      <PlayerName name={newPlayerName} onChangeName={setNewPlayerName} />
       <RandomAvatar onChange={setNewPlayerAvatar} />
 
       <div className="flex justify-center mt-8">
         <button
           type="button"
-          className="addPlayerButton flex items-center justify-center border border-transparent shadow-sm text-sm leading-4 font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 p-2 rounded-full bg-[#9A373F] border-[#808080]"
+          className="addPlayerButton flex items-center justify-center border border-transparent shadow-sm text-xl leading-4 font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 p-2 rounded-full bg-[#9A373F] border-[#808080]"
           onClick={onNewPlayerCreated}
         >
-          AJOUTER UN JOUEUR
+          +
         </button>
       </div>
 
-      <div className="flex flex-wrap gap-4">
+      {/* Pour chaque nouveau joueur créé on affiche une div avec l'avatar et le nom */}
+      <div className="flex justify-center flex-wrap gap-4">
         {players.map((player) => (
-          <div>
+          <div key={player.id} className="mt-8 flex flex-col items-center">
             <img
               width="100"
               height="100"
               src={player.misc}
               alt={`${player.name} avatar`}
             />
-            <p>{player.name}</p>
+            <p className="text-sm">{player.name}</p>
           </div>
         ))}
       </div>

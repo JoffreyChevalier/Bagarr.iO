@@ -20,14 +20,6 @@ export default function test() {
           <CountDown />
         </TButton>
       </div>
-      <div className="flex justify-center py-8">
-        <TButton
-          variant="secondary"
-          buttonClass="text-[##FFFFFF] h-24 w-24 text-xl"
-        >
-          Prêt ?
-        </TButton>
-      </div>
     </div>
   );
 }

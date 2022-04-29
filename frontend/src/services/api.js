@@ -22,11 +22,28 @@ export const addPlayer = async (player, tournament) => {
   ).data;
 };
 
+// Post API pour envoyer tous les joueurs créés à l'API
 export const addMassPlayers = async (tournament, players) => {
   return (
     await axios.post(
       `${API_URL}/tournaments/${tournament.id}/participants/bulk_add.json`,
       { participants: players }
+    )
+  ).data;
+};
+
+// Post API pour démarrer le tournoi
+export const startTournament = async (tournament) => {
+  return (
+    await axios.post(`${API_URL}/tournaments/${tournament.id}/start.json`)
+  ).data;
+};
+
+// Appel API pour supprimer un joueur du tournoi
+export const deletePlayer = async (tournament, player) => {
+  return (
+    await axios.delete(
+      `${API_URL}/tournaments/${tournament.id}/participants/${player.id}.json`
     )
   ).data;
 };

@@ -110,6 +110,11 @@ GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v
 ###
 
 # EFFACER UN TOURNOI 
-DELETE https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11068130.json
+DELETE https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11097655.json
 
 ###
+
+# EFFACER UN JOUEUR DU TOURNOI
+DELETE https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/{tournament}/participants/{participant_id}.json
+
+ ###
