@@ -5,7 +5,7 @@ import Formulaire from "@pages/Contact";
 import MentionsLegales from "@pages/Mentions Legales";
 import Tournament from "@pages/Tournament";
 import FinalRanking from "@pages/FinalRanking";
-import WorkingNavbar from "@components/WorkingNavbar";
+// import WorkingNavbar from "@components/WorkingNavbar";
 import CreateTournament from "@pages/CreateTournament";
 import Timer from "@pages/Timer";
 
@@ -13,9 +13,8 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App m-0 bg-[url('/img/hero-pattern.svg')]">
-      <WorkingNavbar />
-
+    <div className="App flex justify-center items-center min-h-screen bg-[url('./src/assets/background_image.jpg')]">
+      {/* <WorkingNavbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/formulaires" element={<Formulaire />} />
