@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-
-import ModalHint from "@components/ModalHint";
 // import Footer from "@components/Footer";
 import StartButton from "@components/StartButton";
 
@@ -18,18 +15,15 @@ function Home() {
           </div>
           <div className="acroche">
             <p className="font-standard_font text-lg">
-              Devenez maître du tournoi grâce à cette application,
-              affrontez-vous : joueur contre joueur ou en groupe ! Mettez en jeu
-              des récompenses pour les gagnants et des gages pour les perdants !
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus veniam, perspiciatis explicabo voluptatem provident
+              nisi autem non, natus omnis aperiam corporis voluptatum eum. Unde
+              molestias aspernatur autem assumenda repudiandae enim.{" "}
             </p>
-            <div className="flex justify-center mt-8">
-              <ModalHint />
-            </div>
+            <div className="flex justify-center mt-8" />
           </div>
           <div className="flex justify-center py-8">
-            <Link to="/creer-un-tournoi">
-              <StartButton />
-            </Link>
+            <StartButton />
           </div>
         </div>
       </div>

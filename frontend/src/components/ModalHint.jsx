@@ -1,16 +1,12 @@
 import Popup from "reactjs-popup";
 
-export default function ModalHint() {
+export default function ModalHint({ buttonClass }) {
   return (
     <div>
       <Popup
         trigger={
-          <button
-            type="button"
-            className="button focus:outline-none transition duration-150 ease-in-out hover:bg-indigo-600 bg-[#BA8208] rounded text-white px-4 py-1 text-md"
-          >
-            {" "}
-            Première fois ?{" "}
+          <button type="button" className={buttonClass}>
+            guide
           </button>
         }
         modal
