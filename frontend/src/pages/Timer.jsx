@@ -1,4 +1,4 @@
-import CountDown from "@components/CountDown";
+// import CountDown from "@components/CountDown";
 import TButton from "@components/TButton";
 
 export default function test() {
@@ -17,7 +17,7 @@ export default function test() {
           rounded
           buttonClass="text-[##FFFFFF] h-24 w-24 text-xl"
         >
-          <CountDown />
+          {/* <CountDown /> */}
         </TButton>
       </div>
     </div>

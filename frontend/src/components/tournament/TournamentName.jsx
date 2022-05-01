@@ -14,9 +14,9 @@ export default function TournamentName({ name, onChange }) {
         px-1
         py-1
         text-base
-        font-normal
+        font-standard_font
         text-white
-        bg-button_bg bg-clip-padding bg-no-repeat
+        bg-third_color bg-clip-padding bg-no-repeat
         border border-solid border-border_button
         rounded
         transition

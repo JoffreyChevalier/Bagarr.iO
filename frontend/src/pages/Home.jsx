@@ -1,10 +1,9 @@
-import Footer from "@components/Footer";
 import StartButton from "@components/StartButton";
 
 function Home() {
   return (
     <div className="flex-col item-center justify-center">
-      <div className="flex-col h-fit p-16 max-w-sm sm:max-w-lg lg:max-w-2xl border border-black backdrop-blur-md text-black shadow-xl rounded-xl">
+      <div className="mt-4 h-fit p-16 max-w-sm sm:max-w-lg lg:max-w-2xl border border-black backdrop-blur-md text-black shadow-xl rounded-xl">
         <div className="flex justify-center pb-12">
           <img
             className="w-fit"
@@ -25,7 +24,6 @@ function Home() {
           <StartButton />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

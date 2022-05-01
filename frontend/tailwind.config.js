@@ -3,9 +3,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        prim_color: "#3f5be7",
-        second_color: "#BA8208",
-        third_color: "#9A373F",
+        first_color: "#BA8208",
+        second_color: "#327D45",
+        third_color: "#005C68",
         button_bg: "#04395E",
         border_button: "#808080",
       },
