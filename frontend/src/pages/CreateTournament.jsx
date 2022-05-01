@@ -9,11 +9,8 @@ import {
   addMassPlayers,
   startTournament,
 } from "@services/api";
-import TButton from "@components/TButton";
-import {
-  ArrowRightIcon as ArrowRightIconOutline,
-  ArrowLeftIcon as ArrowLeftIconOutline,
-} from "@heroicons/react/outline";
+import NextButton from "@components/skeleton/NextButton";
+import PreviousButton from "@components/skeleton/PreviousButton";
 
 // function FinalizeTournament() {
 //   return <h1>ETAPE 3</h1>;
@@ -62,59 +59,60 @@ function CreateTournament() {
   }
 
   return (
-    <article className="flex justify-center">
-      <div className="backdrop-brightness-150 max-w-fit text-white text-4xl relative block p-8 border border-gray-100 shadow-xl rounded-xl m-6">
-        <h1 className="text-center mb-8">
-          {tournamentName || "Créez votre tournoi"}
-        </h1>
-
-        {/* A la 1ere étape on appelle TournamentName pour inscrire le nom du tournoi */}
-        {step === 1 && (
-          <TournamentName name={tournamentName} onChange={setTournamentName} />
-        )}
-
-        {/* A la 2nde étape on appelle TournamentPlayers pour inscrire le nom et l'avatar du joueur */}
-        {step === 2 && (
-          <TournamentPlayers
-            players={tournamentPlayers}
-            onChange={setTournamentPlayers}
+    <div className="flex-col items-center justify-center">
+      <div className="mt-4 h-fit px-12 max-w-sm sm:max-w-lg lg:max-w-2xl border border-black backdrop-blur-md text-black shadow-xl rounded-xl">
+        <div className="flex-col justify-center pb-12">
+          <img
+            className="w-24 my-12"
+            src="./src/assets/logo_and_text.png"
+            alt="logo d'un point"
           />
-        )}
 
-        {/* A la 3eme étape on appelle FinalizeTournament pour afficher le récapitulatif du tournoi */}
-        {step === 3 && (
-          <FinalizeTournament
-            players={tournamentPlayers}
-            onClick={onPrevStep}
-            tournament={tournament}
-            onDeleteClick={onDeletePlayer}
-          />
-        )}
+          <h1 className="text-center font-title_font text-4xl mb-4">
+            {tournamentName || "Créez votre tournoi"}
+          </h1>
 
-        {/* boutons pour changer d'étape */}
-        <div className="flex justify-between mt-8 items-center">
-          <div>
-            <TButton variant="transparent">
-              <ArrowLeftIconOutline
-                className="h-5 w-5 text-[#9A373F] "
-                onClick={onPrevStep}
-              />
-            </TButton>
-          </div>
+          {/* A la 1ere étape on appelle TournamentName pour inscrire le nom du tournoi */}
+          {step === 1 && (
+            <TournamentName
+              name={tournamentName}
+              onChange={setTournamentName}
+            />
+          )}
 
-          <p className="text-center text-sm">{step}/3 </p>
+          {/* A la 2nde étape on appelle TournamentPlayers pour inscrire le nom et l'avatar du joueur */}
+          {step === 2 && (
+            <TournamentPlayers
+              players={tournamentPlayers}
+              onChange={setTournamentPlayers}
+            />
+          )}
 
-          <div>
-            <TButton variant="transparent">
-              <ArrowRightIconOutline
-                className="h-5 w-5 text-[#9A373F] "
-                onClick={onNextStep}
-              />
-            </TButton>
+          {/* A la 3eme étape on appelle FinalizeTournament pour afficher le récapitulatif du tournoi */}
+          {step === 3 && (
+            <FinalizeTournament
+              players={tournamentPlayers}
+              onClick={onPrevStep}
+              tournament={tournament}
+              onDeleteClick={onDeletePlayer}
+            />
+          )}
+
+          {/* boutons pour changer d'étape */}
+          <div className="flex justify-between mt-8 items-center">
+            <div>
+              <PreviousButton onClick={onPrevStep} />
+            </div>
+
+            <p className="text-center text-xl font-standard_font">{step}/3 </p>
+
+            <div>
+              <NextButton onClick={onNextStep} />
+            </div>
           </div>
         </div>
       </div>
-    </article>
+    </div>
   );
 }
 

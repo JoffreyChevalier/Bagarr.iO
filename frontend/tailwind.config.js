@@ -3,11 +3,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        prim_color: "#07004D",
-        second_color: "#BA8208",
-        third_color: "#9A373F",
+        first_color: "#BA8208",
+        second_color: "#327D45",
+        third_color: "#005C68",
         button_bg: "#04395E",
         border_button: "#808080",
+      },
+      fontFamily: {
+        title_font: ['"Suez One"', "serif"],
+        standard_font: ['"DM Sans", "sans-serif"'],
       },
     },
   },

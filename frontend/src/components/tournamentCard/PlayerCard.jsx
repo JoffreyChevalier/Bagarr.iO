@@ -1,7 +1,7 @@
 function PlayerCard() {
   return (
     <div>
-      <div className="relative max-w-xs h-20 bg-second_color grid grid-cols-1 gap-4 p-4 m-6 rounded-lg shadow-lg">
+      <div className="relative max-w-xs h-20 bg-first_color grid grid-cols-1 gap-4 p-4 m-6 rounded-lg shadow-lg">
         <div className="relative flex gap-4">
           <img
             src="https://icons.iconarchive.com/icons/diversity-avatars/avatars/256/charlie-chaplin-icon.png"

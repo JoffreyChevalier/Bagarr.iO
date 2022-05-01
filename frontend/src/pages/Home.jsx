@@ -1,47 +1,30 @@
-import { Link } from "react-router-dom";
-
-import ModalHint from "@components/ModalHint";
-import TButton from "@components/TButton";
-import Footer from "@components/Footer";
+import StartButton from "@components/StartButton";
 
 function Home() {
   return (
-    <>
-      <body>
-        <div>
-          <div className="flex justify-center py-8 ">
-            <img
-              className="h-32 sm:h-48"
-              src="./src/assets/logo poing.png"
-              alt="logo d'un point"
-            />
-          </div>
-          <div className="acroche">
-            <h1>Bienvenue sur Bagarr.iO !</h1>
-            <h2>
-              Devenez maître du tournoi grâce à cette application, affrontez
-              vous : joueur contre joueur ou en groupe ! Mettez en jeu des
-              récompenses pour les gagnants et des gages pour les perdants !
-            </h2>
-          </div>
-          <div className="flex justify-center py-8">
-            <Link to="/creer-un-tournoi">
-              <TButton
-                variant="secondary"
-                rounded
-                buttonClass="text-[##FFFFFF] h-24 w-24 text-xl"
-              >
-                Créer mon tournoi
-              </TButton>
-            </Link>
-          </div>
-          <div className="flex justify-center">
-            <ModalHint />
-          </div>
+    <div className="flex-col item-center justify-center">
+      <div className="mt-4 h-fit p-16 max-w-sm sm:max-w-lg lg:max-w-2xl border border-black backdrop-blur-md text-black shadow-xl rounded-xl">
+        <div className="flex justify-center pb-12">
+          <img
+            className="w-fit"
+            src="./src/assets/logo_and_text.png"
+            alt="logo d'un point"
+          />
         </div>
-      </body>
-      <Footer />
-    </>
+        <div className="acroche">
+          <p className="font-standard_font text-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus veniam, perspiciatis explicabo voluptatem provident
+            nisi autem non, natus omnis aperiam corporis voluptatum eum. Unde
+            molestias aspernatur autem assumenda repudiandae enim.{" "}
+          </p>
+          <div className="flex justify-center mt-8" />
+        </div>
+        <div className="flex justify-center py-8">
+          <StartButton />
+        </div>
+      </div>
+    </div>
   );
 }
 

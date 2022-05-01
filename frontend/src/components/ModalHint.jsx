@@ -1,16 +1,12 @@
 import Popup from "reactjs-popup";
 
-export default function ModalHint() {
+export default function ModalHint({ buttonClass }) {
   return (
     <div>
       <Popup
         trigger={
-          <button
-            type="button"
-            className="button focus:outline-none transition duration-150 ease-in-out hover:bg-indigo-600 bg-[#BA8208] rounded text-white px-4 py-1 text-md"
-          >
-            {" "}
-            Première fois ?{" "}
+          <button type="button" className={buttonClass}>
+            guide
           </button>
         }
         modal
@@ -43,11 +39,11 @@ export default function ModalHint() {
                     <line x1={6} y1={6} x2={18} y2={18} />
                   </svg>
                 </div>
-                <h1 className="header text-black text-xl font-lg font-bold tracking-normal leading-tight mb-4">
+                <h1 className="header text-black text-xl font-lg font-title_font tracking-normal leading-tight mb-4">
                   {" "}
                   Bagarr.iO, comment ça fonctionne ?{" "}
                 </h1>
-                <div className="content">
+                <div className="content font-standard_font">
                   {" "}
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Atque, a nostrum. Dolorem, repellat quidem ut, minima sint vel

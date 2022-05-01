@@ -1,5 +1,6 @@
-import RandomAvatar from "@components/RandomAvatars";
 import { useState } from "react";
+
+import RandomAvatar from "@components/RandomAvatars";
 import PlayerName from "./PlayerName";
 
 function TournamentPlayers({ players, onChange }) {
@@ -15,18 +16,18 @@ function TournamentPlayers({ players, onChange }) {
 
   return (
     <div>
-      <div className="mb-8">
-        {/* On fait passer le nom la saisie de l'utilisateur via la props onChange */}
-        <PlayerName name={newPlayerName} onChangeName={setNewPlayerName} />
+      <div className="flex-col justify-center items-center">
+        <RandomAvatar onChange={setNewPlayerAvatar} />
+        <div className="flex items-center my-6">
+          {/* On fait passer le nom la saisie de l'utilisateur via la props onChange */}
+          <PlayerName name={newPlayerName} onChangeName={setNewPlayerName} />
+        </div>
+        {/* <h1 className="mainTitle mb-8 text-center">Joueur</h1> */}
       </div>
-      {/* <h1 className="mainTitle mb-8 text-center">Joueur</h1> */}
-
-      <RandomAvatar onChange={setNewPlayerAvatar} />
-
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center justify-center mt-4">
         <button
           type="button"
-          className="addPlayerButton flex items-center justify-center border border-transparent shadow-sm text-xl leading-4 font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 p-2 rounded-full bg-[#9A373F] border-[#808080]"
+          className="bg-first_color hover:bg-second_color text-white font-bold font-title_font text-xl py-2 px-4 rounded-full"
           onClick={onNewPlayerCreated}
         >
           +
@@ -38,12 +39,12 @@ function TournamentPlayers({ players, onChange }) {
         {players.map((player) => (
           <div key={player.id} className="mt-8 flex flex-col items-center">
             <img
-              width="100"
+              width="80"
               height="100"
               src={player.misc}
               alt={`${player.name} avatar`}
             />
-            <p className="text-sm">{player.name}</p>
+            <p className="text-md font-bold">{player.name}</p>
           </div>
         ))}
       </div>
