@@ -18,7 +18,9 @@ export default function CountDown() {
 
   return (
     <div>
-      <div className="mainTitle text-2xl">{counter}</div>
+      <div className="mainTitle font-title_font text-9xl text-first_color">
+        {counter}
+      </div>
     </div>
   );
 }

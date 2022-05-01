@@ -1,40 +1,40 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import TournamentCard from "@components/tournamentCard/TournamentCard";
-import { getTournaments } from "@services/api";
+// import { getTournaments } from "@services/api";
 
 function Tournament() {
-  const [tournaments, setTournaments] = useState();
+  // const [tournaments, setTournaments] = useState();
 
-  useEffect(() => {
-    const fetchTournaments = async () => {
-      setTournaments(await getTournaments());
-    };
+  // useEffect(() => {
+  //   const fetchTournaments = async () => {
+  //     setTournaments(await getTournaments());
+  //   };
 
-    fetchTournaments();
-  }, []);
+  //   fetchTournaments();
+  // }, []);
 
   return (
-    <>
-      <div className="text-white">
-        <h1>ICI la page du jeux de tournois</h1>
+    <div className="flex-col items-center justify-center">
+      <div className="mt-4 h-fit px-12 max-w-sm sm:max-w-lg lg:max-w-2xl border border-black backdrop-blur-md text-black shadow-xl rounded-xl">
+        <div className="flex-col justify-center pb-12">
+          <img
+            className="w-24 my-12"
+            src="./src/assets/logo_and_text.png"
+            alt="logo d'un point"
+          />
 
-        {tournaments ? (
-          tournaments.map((tournament) => (
-            <h2>
-              #{tournament.tournament.id} {tournament.tournament.name}
-            </h2>
-          ))
-        ) : (
-          <p>Chargement de la liste des tournois ...</p>
-        )}
-      </div>
-      <div>
-        <div className="flex-col items-center backdrop-brightness-150 max-w-fit text-white text-4xl relative block p-8 border border-gray-100 shadow-xl rounded-xl m-6">
-          <h1>16eme-8eme-quarts-demi-final</h1>
-          <TournamentCard />
+          <h1 className="text-center font-title_font text-4xl mb-4">
+            <h1>16eme-8eme-quarts-demi-final</h1>
+            {/* {tournamentName || "Créez votre tournoi"} */}
+          </h1>
+          <div>
+            <div className="flex-col w-9xl items-center backdrop-brightness-150 max-w-fit text-4xl relative block p-8 border border-gray-100 shadow-xl rounded-xl m-6">
+              <TournamentCard />
+            </div>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 export default Tournament;
