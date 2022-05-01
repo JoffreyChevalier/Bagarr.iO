@@ -2,7 +2,7 @@ export default function PlayerName({ name, onChangeName }) {
   return (
     <div className="flex button_players">
       <div className="flex justify-center">
-        <div className="mb-3 xl:w-40">
+        <div className=" xl:w-40">
           {/* On fait passer les données la saisie de l'utilisateur via la props onChange */}
           <input
             value={name}
