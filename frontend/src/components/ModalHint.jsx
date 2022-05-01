@@ -39,11 +39,11 @@ export default function ModalHint({ buttonClass }) {
                     <line x1={6} y1={6} x2={18} y2={18} />
                   </svg>
                 </div>
-                <h1 className="header text-black text-xl font-lg font-bold tracking-normal leading-tight mb-4">
+                <h1 className="header text-black text-xl font-lg font-title_font tracking-normal leading-tight mb-4">
                   {" "}
                   Bagarr.iO, comment ça fonctionne ?{" "}
                 </h1>
-                <div className="content">
+                <div className="content font-standard_font">
                   {" "}
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Atque, a nostrum. Dolorem, repellat quidem ut, minima sint vel
