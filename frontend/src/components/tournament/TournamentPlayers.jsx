@@ -15,16 +15,16 @@ function TournamentPlayers({ players, onChange }) {
   }
 
   return (
-    <div>
-      <div className="flex-col justify-center items-center">
+    <div className="flex flex-col items-center">
+      <div className="">
         <RandomAvatar onChange={setNewPlayerAvatar} />
-        <div className="flex items-center my-6">
+        <div className="my-6">
           {/* On fait passer le nom la saisie de l'utilisateur via la props onChange */}
           <PlayerName name={newPlayerName} onChangeName={setNewPlayerName} />
         </div>
         {/* <h1 className="mainTitle mb-8 text-center">Joueur</h1> */}
       </div>
-      <div className="flex justify-center justify-center mt-4">
+      <div className="flex justify-center mt-4">
         <button
           type="button"
           className="bg-first_color hover:bg-second_color text-white font-bold font-title_font text-xl py-2 px-4 rounded-full"

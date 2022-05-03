@@ -9,8 +9,9 @@ import {
   addMassPlayers,
   startTournament,
 } from "@services/api";
-import NextButton from "@components/skeleton/NextButton";
-import PreviousButton from "@components/skeleton/PreviousButton";
+import NextButton from "@components/layouts/NextButton";
+import PreviousButton from "@components/layouts/PreviousButton";
+import Body from "@components/layouts/Body";
 
 // function FinalizeTournament() {
 //   return <h1>ETAPE 3</h1>;
@@ -59,60 +60,51 @@ function CreateTournament() {
   }
 
   return (
-    <div className="flex-col items-center justify-center">
-      <div className="mt-4 h-fit px-12 max-w-sm sm:max-w-lg lg:max-w-2xl border border-black backdrop-blur-md text-black shadow-xl rounded-xl">
-        <div className="flex-col justify-center pb-12">
-          <img
-            className="w-24 my-12"
-            src="./src/assets/logo_and_text.png"
-            alt="logo d'un point"
+    <Body>
+      <>
+        <h1 className="text-center uppercase font-title_font text-6xl mb-4">
+          {tournamentName || "Créez votre tournoi"}
+        </h1>
+
+        {/* A la 1ere étape on appelle TournamentName pour inscrire le nom du tournoi */}
+        {step === 1 && (
+          <TournamentName name={tournamentName} onChange={setTournamentName} />
+        )}
+
+        {/* A la 2nde étape on appelle TournamentPlayers pour inscrire le nom et l'avatar du joueur */}
+        {step === 2 && (
+          <TournamentPlayers
+            players={tournamentPlayers}
+            onChange={setTournamentPlayers}
           />
+        )}
 
-          <h1 className="text-center font-title_font text-4xl mb-4">
-            {tournamentName || "Créez votre tournoi"}
-          </h1>
+        {/* A la 3eme étape on appelle FinalizeTournament pour afficher le récapitulatif du tournoi */}
+        {step === 3 && (
+          <FinalizeTournament
+            players={tournamentPlayers}
+            onClick={onPrevStep}
+            tournament={tournament}
+            onDeleteClick={onDeletePlayer}
+          />
+        )}
 
-          {/* A la 1ere étape on appelle TournamentName pour inscrire le nom du tournoi */}
-          {step === 1 && (
-            <TournamentName
-              name={tournamentName}
-              onChange={setTournamentName}
-            />
-          )}
+        {/* boutons pour changer d'étape */}
+        <div className="flex justify-center mt-8 items-center">
+          <div>
+            <PreviousButton onClick={onPrevStep} />
+          </div>
 
-          {/* A la 2nde étape on appelle TournamentPlayers pour inscrire le nom et l'avatar du joueur */}
-          {step === 2 && (
-            <TournamentPlayers
-              players={tournamentPlayers}
-              onChange={setTournamentPlayers}
-            />
-          )}
+          <p className="text-center mx-16 text-xl font-standard_font">
+            {step}/3{" "}
+          </p>
 
-          {/* A la 3eme étape on appelle FinalizeTournament pour afficher le récapitulatif du tournoi */}
-          {step === 3 && (
-            <FinalizeTournament
-              players={tournamentPlayers}
-              onClick={onPrevStep}
-              tournament={tournament}
-              onDeleteClick={onDeletePlayer}
-            />
-          )}
-
-          {/* boutons pour changer d'étape */}
-          <div className="flex justify-between mt-8 items-center">
-            <div>
-              <PreviousButton onClick={onPrevStep} />
-            </div>
-
-            <p className="text-center text-xl font-standard_font">{step}/3 </p>
-
-            <div>
-              <NextButton onClick={onNextStep} />
-            </div>
+          <div>
+            <NextButton onClick={onNextStep} />
           </div>
         </div>
-      </div>
-    </div>
+      </>
+    </Body>
   );
 }
 

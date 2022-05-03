@@ -17,10 +17,10 @@ function RandomAvatar({ onChange }) {
   }, [newAvatar]);
 
   return (
-    <div className="random-avatar flex-col mt-2">
+    <div className="flex flex-col items-center">
       <img width="130" src={newAvatar} alt="Your avatar" />
       <button
-        className="mt-1 flex justify-center items-center h-7 w-32 shadow-lg text-standard_font font-md rounded-md text-white bg-first_color hover:bg-second_color"
+        className="mt-1 h-7 w-32 shadow-lg text-standard_font font-standard_font rounded-md text-white bg-first_color hover:bg-second_color"
         type="button"
         onClick={() => setNewAvatar(generateRandomAvatar())}
       >
