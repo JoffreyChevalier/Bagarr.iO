@@ -19,11 +19,12 @@ app.use(
 // On envoie toutes les requêtes commençant par /tournaments
 // vers L'API challonge
 app.use(
-  /\/tournaments.*/g,
   createProxyMiddleware({
+    pathFilter: "/tournaments*",
     target: "https://api.challonge.com/v1",
     auth: process.env.API_KEY,
     changeOrigin: true,
+    secure: true,
   })
 );
 
