@@ -15,7 +15,7 @@ function TournamentPlayers({ players, onChange }) {
   }
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mt-16">
       <div className="">
         <RandomAvatar onChange={setNewPlayerAvatar} />
         <div className="my-6">
@@ -27,7 +27,7 @@ function TournamentPlayers({ players, onChange }) {
       <div className="flex justify-center mt-4">
         <button
           type="button"
-          className="bg-first_color hover:bg-[#9A373F] text-white font-bold font-title_font text-xl py-2 px-4 rounded-full"
+          className="bg-first_color hover:bg-second_color text-white font-bold font-title_font text-xl py-2 px-4 rounded-full"
           onClick={onNewPlayerCreated}
         >
           +

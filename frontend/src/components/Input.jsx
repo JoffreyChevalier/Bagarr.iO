@@ -9,20 +9,22 @@ export default function TournamentName({ name, onChange, placeholder }) {
             onChange={(event) => onChange(event.target.value)}
             placeholder={placeholder}
             className="form-select appearance-none
-        block
-        w-full
-        px-1
-        py-1
-        text-base
-        font-normal
-        text-white
-        bg-[#9A373F] bg-clip-padding bg-no-repeat
-        border border-solid border-border_button
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-white focus:bg-button_bg focus:border-border_button focus:outline-none"
+            block
+            w-full
+            px-1
+            py-1
+            text-base
+            font-standard_font
+            text-black
+            placeholder:text-slate-400
+            bg-white bg-clip-padding bg-no-repeat
+            border border-solid border-border_button
+            rounded
+            transition
+            ease-in-out
+            m-0
+            text-center
+            focus:text-black focus:bg-slate-100 focus:border-border_button focus:outline-none focus:text-center"
             aria-label="Default select example"
           />
         </div>

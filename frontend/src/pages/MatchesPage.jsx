@@ -4,6 +4,7 @@ import { getParticipants, getTournamentMatches } from "@services/api";
 import MatchesTour from "@components/MatchesTour";
 import NextButton from "@components/layouts/NextButton";
 import PreviousButton from "@components/layouts/PreviousButton";
+import Body from "@components/layouts/Body";
 
 function MatchesPage() {
   const { tournamentId } = useParams();
@@ -45,28 +46,30 @@ function MatchesPage() {
   }
 
   return (
-    <div>
-      <h1>Tour {round} / xxx</h1>
+    <Body>
+      <div>
+        <h1>Tour {round} / xxx</h1>
 
-      <MatchesTour
-        players={tournamentPlayers}
-        tournamentMatches={tournamentMatches.filter(
-          ({ match }) => match.round === round
-        )}
-      />
+        <MatchesTour
+          players={tournamentPlayers}
+          tournamentMatches={tournamentMatches.filter(
+            ({ match }) => match.round === round
+          )}
+        />
 
-      <div className="flex justify-between mt-8 items-center">
-        <div>
-          <PreviousButton onClick={onPrevRound} />
-        </div>
+        <div className="flex justify-between mt-8 items-center">
+          <div>
+            <PreviousButton onClick={onPrevRound} />
+          </div>
 
-        <p className="text-center text-xl font-standard_font">{round}/3 </p>
+          <p className="text-center text-xl font-standard_font">{round}/3 </p>
 
-        <div>
-          <NextButton onClick={onNextRound} />
+          <div>
+            <NextButton onClick={onNextRound} />
+          </div>
         </div>
       </div>
-    </div>
+    </Body>
   );
 }
 export default MatchesPage;
