@@ -4,6 +4,7 @@ import TournamentContext from "@components/contexts/TournamentContext";
 import TournamentName from "@components/tournament/TournamentName";
 import TournamentPlayers from "@components/tournament/TournamentPlayers";
 import FinalizeTournament from "@components/tournament/FinalizeTournament";
+import Steps from "@components/Steps";
 import {
   createTournamentApi,
   addMassPlayers,
@@ -29,9 +30,6 @@ function CreateTournament() {
   } = useContext(TournamentContext);
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
-  // const [tournamentName, setTournamentName] = useState("");
-  // const [tournamentPlayers, setTournamentPlayers] = useState([]);
-  // const [tournament, setTournament] = useState();
 
   // Au clic sur PREV MàJ du numéro d'étape (-1)
   function onPrevStep() {
@@ -110,9 +108,7 @@ function CreateTournament() {
               <PreviousButton onClick={onPrevStep} />
             </div>
 
-            <p className="text-center mx-16 text-xl font-standard_font">
-              {step}/3{" "}
-            </p>
+            <Steps stepCount={3} currentStep={step} />
 
             <div>
               <NextButton onClick={onNextStep} />
