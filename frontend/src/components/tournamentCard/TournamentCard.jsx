@@ -15,6 +15,15 @@ function TournamentCard({ matchIndex, players }) {
           playerImg={players[1].participant.misc}
         />
       </div>
+      <button
+        type="button"
+        className="button focus:outline-none transition duration-150 ease-in-out hover:bg-indigo-600 bg-[#BA8208] rounded text-white px-8 py-2 text-sm"
+        onClick={() => {
+          "cool";
+        }}
+      >
+        match fini
+      </button>
     </div>
   );
 }
