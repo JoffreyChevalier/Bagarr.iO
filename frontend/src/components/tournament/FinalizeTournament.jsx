@@ -12,7 +12,7 @@ export default function FinalizeTournament({
       <div className=" flex justify-center mb-6">
         <button
           type="button"
-          className="mt-8 bg-first_color hover:bg-[#9A373F] text-white font-standard_font text-xl py-2 px-4 rounded-full"
+          className="mt-8 bg-first_color hover:bg-second_color text-white font-standard_font text-xl py-2 px-4 rounded-full"
           onClick={onClick}
         >
           Ajouter un joueur
