@@ -15,8 +15,13 @@ import "./App.css";
 function App() {
   const [tournamentName, setTournamentName] = useState("");
   const [tournamentPlayers, setTournamentPlayers] = useState([]);
+  // state pour passer le tournoi dans le composant final ranking (on est obligé d'avoir l'id en cours du tournoi)
   const [tournament, setTournament] = useState();
 
+  // step 1. dans APP: Tournament => Vide
+  // step 2. on passe tournament vide à Create Tournament et la fonction de set
+  // step 3. Create tournament va utiliser set pour modifier Tournament vide avec les valeurs de la BDD
+  // Step 4. on passe tournament aussi a Final ranking qui va recevoir le tournoi créé
   function getTournamentContext() {
     return {
       tournamentName,

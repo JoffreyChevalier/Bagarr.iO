@@ -71,7 +71,7 @@ GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v
 ###
 
 # AFFICHER LE MATCH 
-GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11072182/matches/273456392.json
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11093514/matches/274213458.json
 
 ###
 
@@ -88,12 +88,12 @@ content-type: application/json
 ###
 
 # CLOTURER LE TOURNOI
-POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11072182/finalize.json
+POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11093514/finalize.json
 
 ###
 
 # NE PLUS MARQUER LE MATCH COMME EN COURS
-POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11068133/matches/273361822/unmark_as_underway.json
+POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11093514/matches/274213458/unmark_as_underway.json
 
 ###
 

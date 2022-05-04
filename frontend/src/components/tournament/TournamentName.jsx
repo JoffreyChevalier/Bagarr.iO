@@ -16,14 +16,14 @@ export default function TournamentName({ name, onChange }) {
         text-base
         font-standard_font
         text-white
-        bg-third_color bg-clip-padding bg-no-repeat
+        bg-[#9A373F] bg-clip-padding bg-no-repeat
         border border-solid border-border_button
         rounded
         transition
         ease-in-out
         m-0
         text-center
-        focus:text-white focus:bg-button_bg focus:border-border_button focus:outline-none focus:text-center"
+        focus:text-white focus:bg-[#9A373F] focus:border-border_button focus:outline-none focus:text-center"
             aria-label="Default select example"
           />
         </div>

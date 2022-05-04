@@ -37,4 +37,5 @@ function Tournament() {
     </div>
   );
 }
+
 export default Tournament;

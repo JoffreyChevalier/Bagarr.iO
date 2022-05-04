@@ -16,7 +16,7 @@ export default function TournamentName({ name, onChange, placeholder }) {
         text-base
         font-normal
         text-white
-        bg-button_bg bg-clip-padding bg-no-repeat
+        bg-[#9A373F] bg-clip-padding bg-no-repeat
         border border-solid border-border_button
         rounded
         transition
