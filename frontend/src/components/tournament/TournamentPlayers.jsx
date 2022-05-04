@@ -15,7 +15,7 @@ function TournamentPlayers({ players, onChange }) {
   }
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mt-16">
       <div className="">
         <RandomAvatar onChange={setNewPlayerAvatar} />
         <div className="my-6">

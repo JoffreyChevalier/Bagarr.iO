@@ -69,7 +69,7 @@ function CreateTournament() {
   }
 
   return (
-    <Body>
+    <Body fullScreen={step === 4}>
       <>
         <h1 className="text-center uppercase font-title_font text-6xl mb-4">
           {tournamentName || "Créez votre tournoi"}
