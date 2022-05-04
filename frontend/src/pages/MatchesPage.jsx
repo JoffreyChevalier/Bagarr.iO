@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getParticipants, getTournamentMatches } from "@services/api";
 import MatchesTour from "@components/MatchesTour";
-import NextButton from "@components/skeleton/NextButton";
-import PreviousButton from "@components/skeleton/PreviousButton";
+import NextButton from "@components/layouts/NextButton";
+import PreviousButton from "@components/layouts/PreviousButton";
 
 function MatchesPage() {
   const { tournamentId } = useParams();

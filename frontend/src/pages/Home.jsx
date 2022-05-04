@@ -15,10 +15,13 @@ function Home() {
           </div>
           <div className="acroche">
             <p className="font-standard_font text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus veniam, perspiciatis explicabo voluptatem provident
-              nisi autem non, natus omnis aperiam corporis voluptatum eum. Unde
-              molestias aspernatur autem assumenda repudiandae enim.{" "}
+              Bienvenue sur Bagarr.iO, le générateur en ligne de tournois.
+              Affrontez vos amis à tous vos jeux ou sport préférés et voyez en
+              temps réel l’avancée de votre compétition ! Paramétrez en quelques
+              secondes votre tournoi et laissé vous guidez au fur et mesures des
+              matchs qui sont générés automatiquement.
+              <br />
+              GET READY TO RUMBLE !{" "}
             </p>
             <div className="flex justify-center mt-8" />
           </div>

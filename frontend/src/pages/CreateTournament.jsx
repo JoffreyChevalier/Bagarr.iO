@@ -105,27 +105,20 @@ function CreateTournament() {
         )}
 
         {step !== 4 && (
-          <div className="flex justify-between mt-8 items-center">
+          <div className="flex justify-center mt-8 items-center">
             <div>
               <PreviousButton onClick={onPrevStep} />
             </div>
+
+            <p className="text-center mx-16 text-xl font-standard_font">
+              {step}/3{" "}
+            </p>
+
+            <div>
+              <NextButton onClick={onNextStep} />
+            </div>
           </div>
         )}
-
-        {/* boutons pour changer d'étape */}
-        <div className="flex justify-center mt-8 items-center">
-          <div>
-            <PreviousButton onClick={onPrevStep} />
-          </div>
-
-          <p className="text-center mx-16 text-xl font-standard_font">
-            {step}/3{" "}
-          </p>
-
-          <div>
-            <NextButton onClick={onNextStep} />
-          </div>
-        </div>
       </>
     </Body>
   );
