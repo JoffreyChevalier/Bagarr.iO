@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
+import TournamentContext from "@components/contexts/TournamentContext";
 import TournamentName from "@components/tournament/TournamentName";
 import TournamentPlayers from "@components/tournament/TournamentPlayers";
 import FinalizeTournament from "@components/tournament/FinalizeTournament";
@@ -12,17 +12,26 @@ import {
 import NextButton from "@components/layouts/NextButton";
 import PreviousButton from "@components/layouts/PreviousButton";
 import Body from "@components/layouts/Body";
+import Timer from "./Timer";
 
 // function FinalizeTournament() {
 //   return <h1>ETAPE 3</h1>;
 // }
 
 function CreateTournament() {
+  const {
+    tournamentName,
+    setTournamentName,
+    tournamentPlayers,
+    setTournamentPlayers,
+    tournament,
+    setTournament,
+  } = useContext(TournamentContext);
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
-  const [tournamentName, setTournamentName] = useState("");
-  const [tournamentPlayers, setTournamentPlayers] = useState([]);
-  const [tournament, setTournament] = useState();
+  // const [tournamentName, setTournamentName] = useState("");
+  // const [tournamentPlayers, setTournamentPlayers] = useState([]);
+  // const [tournament, setTournament] = useState();
 
   // Au clic sur PREV MàJ du numéro d'étape (-1)
   function onPrevStep() {
@@ -32,7 +41,7 @@ function CreateTournament() {
     setStep(step - 1);
   }
   async function onNextStep() {
-    if (step > 3) {
+    if (step > 4) {
       return;
     }
 
@@ -44,8 +53,8 @@ function CreateTournament() {
       // appel api ajout des joueurs en masse
       const response = await addMassPlayers(tournament, tournamentPlayers);
       console.warn(response);
-      navigate("/timer");
       const responseStart = await startTournament(tournament);
+      setStep(step + 1);
       console.warn(responseStart);
     }
 
@@ -89,23 +98,29 @@ function CreateTournament() {
           />
         )}
 
-        {/* boutons pour changer d'étape */}
-        <div className="flex justify-center mt-8 items-center">
-          <div>
-            <PreviousButton onClick={onPrevStep} />
-          </div>
+        {step === 4 && (
+          <Timer
+            onTimeEnd={() => navigate(`/tournois/${tournament.id}/matchs`)}
+          />
+        )}
 
-          <p className="text-center mx-16 text-xl font-standard_font">
-            {step}/3{" "}
-          </p>
+        {step !== 4 && (
+          <div className="flex justify-center mt-8 items-center">
+            <div>
+              <PreviousButton onClick={onPrevStep} />
+            </div>
 
-          <div>
-            <NextButton onClick={onNextStep} />
+            <p className="text-center mx-16 text-xl font-standard_font">
+              {step}/3{" "}
+            </p>
+
+            <div>
+              <NextButton onClick={onNextStep} />
+            </div>
           </div>
-        </div>
+        )}
       </>
     </Body>
   );
 }
-
 export default CreateTournament;

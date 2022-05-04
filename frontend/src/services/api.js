@@ -12,6 +12,13 @@ export const createTournamentApi = async (tournament) => {
   return (await axios.post(`${API_URL}/tournaments.json`, tournament)).data;
 };
 
+// Appel API pour récupérer tous les joueurs du tournoi
+export const getParticipants = async (tournament) => {
+  return (
+    await axios(`${API_URL}/tournaments/${tournament.id}/participants.json`)
+  ).data;
+};
+
 // Post API pour envoyer le joueur créé à l'API
 export const addPlayer = async (player, tournament) => {
   return (
@@ -46,4 +53,10 @@ export const deletePlayer = async (tournament, player) => {
       `${API_URL}/tournaments/${tournament.id}/participants/${player.id}.json`
     )
   ).data;
+};
+
+// Afficher les matchs du tournoi
+export const getTournamentMatches = async (tournament) => {
+  return (await axios(`${API_URL}/tournaments/${tournament.id}/matches.json`))
+    .data;
 };

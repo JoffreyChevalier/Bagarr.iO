@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// Désactivation du useNavigate car obsolète pour le moment car utilisé sur createTournament
+// import { useNavigate } from "react-router-dom";
 
-export default function CountDown() {
-  const navigate = useNavigate();
+export default function CountDown({ onTimeEnd }) {
+  // const navigate = useNavigate();
   const [counter, setCounter] = useState(3);
 
   useEffect(() => {
@@ -11,7 +12,7 @@ export default function CountDown() {
       timer = setInterval(() => setCounter(counter - 1), 1000);
     } else {
       setCounter("GO");
-      timer = setInterval(() => navigate("/tournois"), 1000);
+      timer = setInterval(() => onTimeEnd(), 1000);
     }
     return () => clearInterval(timer);
   }, [counter]);
