@@ -10,6 +10,7 @@ import CreateTournament from "@pages/CreateTournament";
 import Timer from "@pages/Timer";
 import MatchesPage from "@pages/MatchesPage";
 import TournamentContext from "@components/contexts/TournamentContext";
+
 import "./App.css";
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
   }
 
   return (
-    <div className="App bg-fixed flex justify-center items-center min-h-screen bg-[url('./src/assets/background_image.jpg')]">
+    <div className="App bg-fixed flex justify-center items-center min-h-screen">
       <div>
         {/* <WorkingNavbar /> */}
         <TournamentContext.Provider value={getTournamentContext()}>

@@ -7,6 +7,10 @@ input::placeholder {
   opacity: 1;
 }
 
+.App {
+  background-image: url(./assets/background_image.jpg);
+}
+
 /*************************************************************************
 *                          NbrPlayerButton
 **************************************************************************/

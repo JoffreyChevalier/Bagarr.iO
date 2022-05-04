@@ -2,23 +2,19 @@ import ScoreInput from "@components/tournamentCard/ScoreInput";
 
 function PlayerCard({ playerName, playerImg }) {
   return (
-    <div>
-      <div className="border border-black">
-        <div className="">
-          <img
-            src={playerImg}
-            className="h-20 w-20"
-            alt="Player Avatar"
-            loading="lazy"
-          />
-          <div className="">
-            <div className="">
-              <p className="">{playerName}</p>
-            </div>
-          </div>
+    <div className="flex items-center justify-between bg-first_color my-28 h-16 w-56 rounded-lg">
+      <div className="flex flex-col items-center relative bottom-10 ">
+        <img
+          src={playerImg}
+          className="h-24 "
+          alt="Player Avatar"
+          loading="lazy"
+        />
+        <div className="font-standard_font font-bold text-xl text-white">
+          <p className="">{playerName}</p>
         </div>
-        <ScoreInput />
       </div>
+      <ScoreInput />
     </div>
   );
 }
