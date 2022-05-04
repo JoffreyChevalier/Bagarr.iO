@@ -44,23 +44,36 @@ export default function ModalHint({ buttonClass }) {
                   Bagarr.iO, comment ça fonctionne ?{" "}
                 </h1>
                 <div className="content font-standard_font">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Atque, a nostrum. Dolorem, repellat quidem ut, minima sint vel
-                  eveniet quibusdam voluptates delectus doloremque, explicabo
-                  tempore dicta adipisci fugit amet dignissimos?
+                  Cliquez sur le bouton START pour lancer le paramétrage de
+                  votre tournoi. <br />
+                  <br />
+                  Étape 1 <br />
+                  <br />
+                  Sur la page qui s’affiche, vous allez pouvoir rentrer le nom
+                  que vous voulez donner à votre compétition.
+                  <br />
+                  Cliquez sur le bouton suivant pour continuer
                   <br />
                   <br />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Consequatur sit commodi beatae optio voluptatum sed eius
-                  cumque, delectus saepe repudiandae explicabo nemo nam libero
-                  ad, doloribus, voluptas rem alias. Vitae?
+                  Étape 2 <br />
+                  <br />
+                  La page qui s’affiche vous permet d’ajouter les joueurs qui
+                  vont participer. Rentrez le nom ou pseudo du joueur et cliquez
+                  sur le bouton « avatar suivant… » pour choisir son avatar.
+                  Cliquez ensuite sur le bouton « + » pour ajouter ce joueur à
+                  la compétition. Recommencez chaque étape jusqu’à ce que tous
+                  les joueurs soient ajoutés.
+                  <br />
+                  Cliquez sur le bouton suivant pour continuer
                   <br />
                   <br />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Consequatur sit commodi beatae optio voluptatum sed eius
-                  cumque, delectus saepe repudiandae explicabo nemo nam libero
-                  ad, doloribus, voluptas rem alias. Vitae?
+                  Étape 3 <br />
+                  <br />
+                  La page qui s’affiche vous permet de voir un ré-cap du tournoi
+                  qui va être lancé. Vous pouvez ajouter ou supprimer des
+                  joueurs si nécessaire.
+                  <br />
+                  Cliquez sur le bouton suivant pour continuer
                 </div>
                 <div className="actions flex mt-8 items-center justify-start w-full">
                   <button
