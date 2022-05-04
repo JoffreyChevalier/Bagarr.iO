@@ -36,8 +36,8 @@ function TournamentPlayers({ players, onChange }) {
 
       {/* Pour chaque nouveau joueur créé on affiche une div avec l'avatar et le nom */}
       <div className="flex justify-center flex-wrap gap-4">
-        {players.map((player) => (
-          <div key={player.id} className="mt-8 flex flex-col items-center">
+        {players.map((player, index) => (
+          <div key={index} className="mt-8 flex flex-col items-center">
             <img
               width="80"
               height="100"
