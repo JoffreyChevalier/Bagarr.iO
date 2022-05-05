@@ -15,7 +15,7 @@ export default function FinalRankingCard({
         <p className="mainTitle pt-2 text-2xl ">{playerName}</p>
         <img
           className="rounded-lg bg-transparent h-24 w-24"
-          src={`./src/assets/${medalImg}`}
+          src={medalImg}
           alt="medal"
         />
         <p className="mainTitle py-4 text-2xl">{points}</p>

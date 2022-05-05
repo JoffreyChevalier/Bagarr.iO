@@ -108,7 +108,7 @@ GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v
 ###
 
 # LISTE DES PARTICIPANTS A UN TOURNOI
-GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11121821/participants.json
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11124625/participants.json
 
 ###
 
