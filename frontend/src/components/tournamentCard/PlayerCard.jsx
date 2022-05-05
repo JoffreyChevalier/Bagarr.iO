@@ -2,7 +2,7 @@ import ScoreInput from "@components/tournamentCard/ScoreInput";
 
 function PlayerCard({ playerName, playerImg }) {
   return (
-    <div className="flex items-center justify-between bg-first_color my-28 h-16 w-56 rounded-lg">
+    <div className="flex items-center justify-between bg-first_color my-11 h-16 w-60 rounded-lg">
       <div className="flex flex-col items-center relative bottom-10 ">
         <img
           src={playerImg}

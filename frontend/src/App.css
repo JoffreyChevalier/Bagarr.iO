@@ -2,52 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-input::placeholder {
-  color: #ffffff;
-  opacity: 1;
-}
-
 .App {
   background-image: url(./assets/background_image.jpg);
-}
-
-/*************************************************************************
-*                          NbrPlayerButton
-**************************************************************************/
-
-.minus_button,
-.plus_button {
-  display: flex;
-  margin: 5px;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  color: rgb(128, 128, 128);
-  background-color: rgb(4, 57, 94);
-  border: 1px solid rgb(128, 128, 128);
-  border-radius: 50%;
-}
-
-.button_players {
-  justify-content: center;
-  align-items: baseline;
-}
-
-option:focus {
-  text-align: center;
-}
-
-/*************************************************************************
-*                          CreateTournament
-**************************************************************************/
-
-.createTournamentBlock {
-  margin-bottom: 55px;
-}
-
-.addPlayerButton {
-  border-radius: 50%;
 }
 
 /*************************************************************************

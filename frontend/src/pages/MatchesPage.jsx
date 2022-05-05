@@ -48,7 +48,9 @@ function MatchesPage() {
   return (
     <Body>
       <div>
-        <h1>Tour {round} / xxx</h1>
+        <h1 className="font-title_font text-5xl text-center">
+          Tour {round} / xxx
+        </h1>
 
         <MatchesTour
           players={tournamentPlayers}
