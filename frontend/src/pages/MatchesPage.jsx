@@ -17,19 +17,25 @@ function MatchesPage() {
     setTournamentMatches(await getTournamentMatches({ id: tournamentId }));
   }
 
-  // function isCurrentRoundEnded() {
-  //   return (
-  //     tournamentMatches.filter(
-  //       (match) => match.round === round && match.state !== "complete"
-  //     ).length === 0
-  //   );
-  // }
+  function isCurrentRoundEnded() {
+    return (
+      tournamentMatches.filter(
+        ({ match }) => match.round === round && match.state !== "complete"
+      ).length === 0
+    );
+  }
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  console.warn(tournamentMatches);
+  function getLastRound() {
+    if (!tournamentMatches.length) {
+      return "...";
+    }
+
+    return tournamentMatches[tournamentMatches.length - 1].match.round;
+  }
 
   function onPrevRound() {
     if (round <= 1) {
@@ -38,18 +44,25 @@ function MatchesPage() {
     setRound(round - 1);
   }
 
-  function onNextRound() {
-    if (round > 3) {
+  async function onNextRound() {
+    if (round > getLastRound()) {
       return;
     }
-    setRound(round + 1);
+
+    if (isCurrentRoundEnded()) {
+      setRound(round + 1);
+    }
   }
+
+  // const matchRound = tournamentMatches[tournamentMatches.length - 1];
+
+  console.warn(isCurrentRoundEnded());
 
   return (
     <Body>
       <div>
         <h1 className="font-title_font text-5xl text-center">
-          Tour {round} / xxx
+          Tour {round} / {getLastRound()}
         </h1>
 
         <MatchesTour
@@ -57,6 +70,7 @@ function MatchesPage() {
           tournamentMatches={tournamentMatches.filter(
             ({ match }) => match.round === round
           )}
+          onMatchFinished={fetchData}
         />
 
         <div className="flex justify-between mt-8 items-center">
@@ -64,11 +78,15 @@ function MatchesPage() {
             <PreviousButton onClick={onPrevRound} />
           </div>
 
-          <p className="text-center text-xl font-standard_font">{round}/3 </p>
+          <p className="text-center text-xl font-standard_font">
+            Round {round}/{getLastRound()}{" "}
+          </p>
 
-          <div>
-            <NextButton onClick={onNextRound} />
-          </div>
+          {isCurrentRoundEnded() && (
+            <div>
+              <NextButton onClick={onNextRound} />
+            </div>
+          )}
         </div>
       </div>
     </Body>

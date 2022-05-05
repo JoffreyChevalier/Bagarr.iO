@@ -8,6 +8,7 @@ export default function PlayerName({ name, onChangeName }) {
             value={name}
             onChange={(event) => onChangeName(event.target.value)}
             placeholder="Nom du joueur"
+            required="required"
             className="form-select appearance-none
         block
         w-full
