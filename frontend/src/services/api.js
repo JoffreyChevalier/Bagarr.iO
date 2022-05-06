@@ -60,3 +60,22 @@ export const getTournamentMatches = async (tournament) => {
   return (await axios(`${API_URL}/tournaments/${tournament.id}/matches.json`))
     .data;
 };
+
+// Envoyer le score du match joué
+export const postScore = async (tournamentId, matchId, score, winnerId) => {
+  return (
+    await axios.put(
+      `${API_URL}/tournaments/${tournamentId}/matches/${matchId}.json`,
+      { match: { scores_csv: score, winner_id: winnerId } }
+    )
+  ).data;
+};
+
+// Indiquer le match comme fini
+export const matchEnded = async (tournament, match) => {
+  return (
+    await axios.post(
+      `${API_URL}/tournaments/${tournament.id}/matches/${match.id}/unmark_as_underway.json`
+    )
+  ).data;
+};

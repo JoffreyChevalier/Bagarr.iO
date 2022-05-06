@@ -1,6 +1,6 @@
 import ScoreInput from "@components/tournamentCard/ScoreInput";
 
-function PlayerCard({ playerName, playerImg }) {
+function PlayerCard({ playerName, playerImg, score, onChangeScore }) {
   return (
     <div className="flex items-center justify-between bg-first_color my-11 h-16 w-60 rounded-lg">
       <div className="flex flex-col items-center relative bottom-10 ">
@@ -13,6 +13,7 @@ function PlayerCard({ playerName, playerImg }) {
         <div className="font-standard_font font-bold text-xl text-white">
           <p className="">{playerName}</p>
         </div>
+        <ScoreInput value={score} onChangeScore={onChangeScore} />
       </div>
       <ScoreInput />
     </div>

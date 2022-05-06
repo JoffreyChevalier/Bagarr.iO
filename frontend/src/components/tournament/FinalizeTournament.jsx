@@ -19,8 +19,8 @@ export default function FinalizeTournament({
         </button>
       </div>
       <div className="flex justify-center flex-wrap gap-x-10">
-        {players.map((player) => (
-          <div key={player.id} className="flex flex-col items-center py-2">
+        {players.map((player, index) => (
+          <div key={index} className="flex flex-col items-center py-2">
             <img
               src={player.misc}
               alt={`${player.name}`}

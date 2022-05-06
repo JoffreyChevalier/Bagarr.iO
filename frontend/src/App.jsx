@@ -43,10 +43,13 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/formulaires" element={<Formulaire />} />
             <Route path="/mentionslegales" element={<MentionsLegales />} />
-            <Route path="/tournois" element={<Tournament />} />
-            <Route path="/classementfinal" element={<FinalRanking />} />
             <Route path="/creer-un-tournoi" element={<CreateTournament />} />
             <Route path="/timer" element={<Timer />} />
+            <Route path="/tournois" element={<Tournament />} />
+            <Route
+              path="/tournois/:tournamentId/classement"
+              element={<FinalRanking />}
+            />
             <Route
               path="/tournois/:tournamentId/matchs"
               element={<MatchesPage />}
