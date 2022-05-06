@@ -25,9 +25,11 @@ function TournamentCard({ matchIndex, match, players, onFinished }) {
 
   return (
     <div className="m-8">
-      <h1 className="font-title_font mb-10 text-xl">Match {matchIndex}</h1>
+      <h1 className="font-standard_font mb-10 font-bold text-3xl">
+        Match {matchIndex}
+      </h1>
       <div className="flex items-center">
-        <div className="border border-gray-300 px-4 rounded-xl">
+        <div className="border border-gray-300 px-8 rounded-xl">
           <PlayerCard
             onChangeScore={setScore1}
             score={score1}

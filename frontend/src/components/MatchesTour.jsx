@@ -3,9 +3,6 @@ import TournamentCard from "@components/tournamentCard/TournamentCard";
 function MatchesTour({ tournamentMatches, players, onMatchFinished }) {
   return (
     <div>
-      <h1 className="font-standard_font text-lg text-center">
-        Liste des matches
-      </h1>
       <div className="flex flex-wrap items-center justify-center">
         {tournamentMatches ? (
           tournamentMatches.map(({ match }, index) => (

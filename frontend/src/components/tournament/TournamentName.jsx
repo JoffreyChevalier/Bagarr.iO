@@ -1,7 +1,7 @@
 export default function TournamentName({ name, onChange }) {
   return (
-    <div className="flex button_players mt-16">
-      <div className="flex justify-center">
+    <div className="flex justify-center mt-16">
+      <div className="flex">
         <div className="mb-3 xl:w-40">
           {/* On fait passer les données la saisie de l'utilisateur via la props onChange */}
           <input

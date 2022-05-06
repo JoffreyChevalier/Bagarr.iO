@@ -13,9 +13,8 @@ function PlayerCard({ playerName, playerImg, score, onChangeScore }) {
         <div className="font-standard_font font-bold text-xl text-white">
           <p className="">{playerName}</p>
         </div>
-        <ScoreInput value={score} onChangeScore={onChangeScore} />
       </div>
-      <ScoreInput />
+      <ScoreInput value={score} onChangeScore={onChangeScore} />
     </div>
   );
 }
