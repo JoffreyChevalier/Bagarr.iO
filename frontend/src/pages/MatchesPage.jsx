@@ -61,7 +61,7 @@ function MatchesPage() {
   return (
     <Body>
       <div>
-        <h1 className="font-title_font text-5xl text-center">
+        <h1 className="font-title_font text-6xl text-center mb-10">
           Tour {round} / {getLastRound()}
         </h1>
 
