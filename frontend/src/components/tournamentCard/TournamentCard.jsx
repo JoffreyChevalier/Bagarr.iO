@@ -3,6 +3,7 @@ import { useState } from "react";
 import PlayerCard from "./PlayerCard";
 
 function TournamentCard({ matchIndex, match, players, onFinished }) {
+  // N'affiche rien par défaut si aucun score, sinon affiche le score du joueur
   const [score1, setScore1] = useState(
     match.scores_csv ? match.scores_csv.split("-")[0] : ""
   );
@@ -10,9 +11,11 @@ function TournamentCard({ matchIndex, match, players, onFinished }) {
     match.scores_csv ? match.scores_csv.split("-")[1] : ""
   );
 
+  // Si le score du joueur 1 > joueur alors le joueur 1 est le gagnant, sinon c'est le 2
   async function onSubmitScores() {
     const winner = players[score1 > score2 ? 0 : 1];
 
+    // On envoie le score à l'api
     await postScore(
       match.tournament_id,
       match.id,
@@ -20,6 +23,7 @@ function TournamentCard({ matchIndex, match, players, onFinished }) {
       winner.participant.id
     );
 
+    // On appelle l'api pour recevoir les infos du tournoi et les matchs
     onFinished();
   }
 
