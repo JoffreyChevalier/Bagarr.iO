@@ -32,8 +32,8 @@ function TournamentCard({ matchIndex, match, players, onFinished }) {
       <h1 className="font-standard_font mb-10 font-bold text-3xl">
         Match {matchIndex}
       </h1>
-      <div className="flex items-center">
-        <div className="border border-gray-300 px-8 rounded-xl">
+      <div className="flex flex-col items-center">
+        <div className="border border-gray-300 px-8 rounded-xl ">
           <PlayerCard
             onChangeScore={setScore1}
             score={score1}
@@ -52,12 +52,12 @@ function TournamentCard({ matchIndex, match, players, onFinished }) {
         </div>
         <button
           type="button"
-          className="bg-first_color rounded-full text-white px-4 py-1 text-sm font-standard_font hover:bg-second_color"
+          className="relative bottom-6 bg-third_color rounded-full text-white drop-shadow-md h-12 px-4 py-1 text-md font-standard_font hover:bg-second_color hover:scale-105 active:scale-100"
           onClick={() => {
             onSubmitScores();
           }}
         >
-          Match fini
+          Match Fini
         </button>
       </div>
     </div>
