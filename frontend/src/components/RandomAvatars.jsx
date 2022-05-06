@@ -11,9 +11,7 @@ function RandomAvatar({ onChange }) {
   const [newAvatar, setNewAvatar] = useState(generateRandomAvatar());
 
   useEffect(() => {
-    if (newAvatar) {
-      onChange(newAvatar);
-    }
+    onChange(newAvatar);
   }, [newAvatar]);
 
   return (

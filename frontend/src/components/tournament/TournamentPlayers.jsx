@@ -10,7 +10,6 @@ function TournamentPlayers({ players, onChange }) {
   // Lorsque le joueur est créé au clic du bouton, on créé un nouveau tableau qui reprend les joueurs et on y ajoute le nouveau joueur
   function onNewPlayerCreated() {
     onChange([...players, { name: newPlayerName, misc: newPlayerAvatar }]);
-    setNewPlayerAvatar("");
     setNewPlayerName("");
   }
 
