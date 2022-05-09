@@ -6,7 +6,7 @@ export default function FinalRankingCard({
 }) {
   return (
     <div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center rounded-md shadow-md gap-y-4">
         <img
           className="rounded-lg -top-8 -mb-4 bg-transparent h-28 w-28"
           src={avatarImg}

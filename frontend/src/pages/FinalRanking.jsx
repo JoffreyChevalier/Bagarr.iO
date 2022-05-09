@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import Container from "@components/Container";
+import Container from "@components/ranking/Container";
 import FinalRankingCard from "@components/ranking/FinalRankingCard";
 import TButton from "@components/TButton";
 import { getParticipants } from "@services/api";
@@ -12,12 +12,29 @@ import silverMedal from "@assets/silver-medal.png";
 import bronzeMedal from "@assets/bronze-medal.png";
 
 // il faudra mettre dans les props de la fonction, le tournoi
-function FinalRanking() {
+function FinalRanking({ updateFullScreen }) {
   const { tournamentId } = useParams();
   const [tournamentParticipants, setTournamentParticipants] = useState();
+  const [animateCardLeft, setAnimateCardLeft] = useState(
+    "lg:translate-x-[100%] lg:translate-y-0"
+  );
+  const [animateCardRight, setAnimateCardRight] = useState(
+    "lg:-translate-x-[100%] lg:translate-y-0"
+  );
 
   useEffect(() => {
     const fetchTournamentsParticipants = async () => {
+      updateFullScreen(true);
+
+      setTimeout(() => {
+        setAnimateCardLeft(
+          "lg:translate-x-8 transition-transform duration-1000 lg:translate-y-4"
+        );
+        setAnimateCardRight(
+          "lg:-translate-x-8 transition-transform duration-1000 lg:translate-y-4"
+        );
+      }, 2000);
+
       // pour l'instant id en dur tant que creation d'un tournoi non fini
       const response = await getParticipants({ id: tournamentId });
 
@@ -34,11 +51,20 @@ function FinalRanking() {
 
   return tournamentParticipants && tournamentParticipants.length ? (
     <Container>
-      <div className="flex flex-col gap-y-12">
+      <div className="flex flex-col gap-y-12 pt-20 h-full">
         <Confetti numberOfPieces={500} recycle={false} />
 
-        <div>
-          <div className="flex justify-center align-item mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-10 grid-rows-1 gap-y-8">
+          <div className={`lg:col-span-3 transform ${animateCardLeft}`}>
+            <FinalRankingCard
+              avatarImg={`${tournamentParticipants[1].participant.misc}`}
+              playerName={`${tournamentParticipants[1].participant.display_name}`}
+              medalImg={silverMedal}
+              points="2 ème"
+            />
+          </div>
+
+          <div className="lg:col-span-4 z-10 bg-white row-start-1 lg:row-auto">
             <FinalRankingCard
               avatarImg={`${tournamentParticipants[0].participant.misc}`}
               playerName={`${tournamentParticipants[0].participant.display_name}`}
@@ -47,14 +73,7 @@ function FinalRanking() {
             />
           </div>
 
-          <div className="flex justify-between">
-            <FinalRankingCard
-              avatarImg={`${tournamentParticipants[1].participant.misc}`}
-              playerName={`${tournamentParticipants[1].participant.display_name}`}
-              medalImg={silverMedal}
-              points="2 ème"
-            />
-
+          <div className={`lg:col-span-3 transform ${animateCardRight}`}>
             <FinalRankingCard
               avatarImg={`${tournamentParticipants[2].participant.misc}`}
               playerName={`${tournamentParticipants[2].participant.display_name}`}
