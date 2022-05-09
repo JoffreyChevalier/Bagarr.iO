@@ -12,6 +12,7 @@ import MatchesPage from "@pages/MatchesPage";
 import TournamentContext from "@components/contexts/TournamentContext";
 
 import "./App.css";
+import Loader from "@components/layouts/Loader";
 
 function App() {
   const [tournamentName, setTournamentName] = useState("");
@@ -40,6 +41,7 @@ function App() {
         {/* <WorkingNavbar /> */}
         <TournamentContext.Provider value={getTournamentContext()}>
           <Routes>
+            <Route path="/loader" element={<Loader />} />
             <Route path="/" element={<Home />} />
             <Route path="/formulaires" element={<Formulaire />} />
             <Route path="/mentionslegales" element={<MentionsLegales />} />

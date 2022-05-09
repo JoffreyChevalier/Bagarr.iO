@@ -1,8 +1,16 @@
 import ScoreInput from "@components/tournamentCard/ScoreInput";
 
-function PlayerCard({ playerName, playerImg, score, onChangeScore }) {
+function PlayerCard({
+  playerName,
+  playerImg,
+  score,
+  onChangeScore,
+  bgColor = "bg-first_color",
+}) {
   return (
-    <div className="flex items-center justify-between bg-first_color my-11 h-16 w-60 rounded-lg drop-shadow-md">
+    <div
+      className={`flex items-center justify-between ${bgColor} my-11 h-16 w-60 rounded-lg drop-shadow-md`}
+    >
       <div className="flex flex-col items-center relative bottom-10 ">
         <img
           src={playerImg}

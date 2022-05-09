@@ -5,6 +5,7 @@ import MatchesTour from "@components/MatchesTour";
 import NextButton from "@components/layouts/NextButton";
 import PreviousButton from "@components/layouts/PreviousButton";
 import Body from "@components/layouts/Body";
+import Loader from "@components/layouts/Loader";
 
 function MatchesPage() {
   const { tournamentId } = useParams();
@@ -72,7 +73,7 @@ function MatchesPage() {
     }
   }
 
-  return (
+  return tournamentMatches && tournamentMatches.length ? (
     <Body>
       <div>
         <h1 className="font-title_font text-6xl text-center mb-10">
@@ -135,6 +136,8 @@ function MatchesPage() {
         </div>
       </div>
     </Body>
+  ) : (
+    <Loader />
   );
 }
 export default MatchesPage;
