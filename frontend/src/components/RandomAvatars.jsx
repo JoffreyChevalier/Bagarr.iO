@@ -16,13 +16,14 @@ function RandomAvatar({ onChange }) {
 
   return (
     <div className="flex flex-col items-center">
-      <img width="130" src={newAvatar} alt="Your avatar" />
+      <img width="150" src={newAvatar} alt="Your avatar" />
       <button
-        className="mt-1 h-7 w-32 shadow-lg text-standard_font font-standard_font rounded-md text-white bg-first_color hover:bg-second_color"
+        className="mt-1 h-fit w-32 shadow-lg text-standard_font font-standard_font rounded-md text-white bg-first_color hover:bg-second_color"
         type="button"
         onClick={() => setNewAvatar(generateRandomAvatar())}
       >
-        Avatar suivant...
+        Choisissez <br />
+        un avatar
       </button>
     </div>
   );

@@ -13,6 +13,7 @@ import {
 import NextButton from "@components/layouts/NextButton";
 import PreviousButton from "@components/layouts/PreviousButton";
 import Body from "@components/layouts/Body";
+import Loader from "@components/layouts/Loader";
 import Timer from "./Timer";
 
 // function FinalizeTournament() {
@@ -30,7 +31,7 @@ function CreateTournament() {
   } = useContext(TournamentContext);
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
-
+  const [isLoading, setIsLoading] = useState(false);
   // Au clic sur PREV MàJ du numéro d'étape (-1)
   function onPrevStep() {
     if (step <= 1) {
@@ -39,6 +40,7 @@ function CreateTournament() {
     setStep(step - 1);
   }
   async function onNextStep() {
+    setIsLoading(true);
     if (step > 4) {
       return;
     }
@@ -58,6 +60,7 @@ function CreateTournament() {
 
     // Au clic sur PREV MàJ du numéro d'étape (+1)
     setStep(step + 1);
+    setIsLoading(false);
   }
 
   function onDeletePlayer(player) {
@@ -65,7 +68,9 @@ function CreateTournament() {
       tournamentPlayers.filter((p) => player.name !== p.name)
     );
   }
-
+  if (isLoading) {
+    return <Loader />;
+  }
   return (
     <Body fullScreen={step === 4}>
       <>

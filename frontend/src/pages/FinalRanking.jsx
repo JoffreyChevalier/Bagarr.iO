@@ -10,6 +10,7 @@ import Confetti from "@components/Confetti";
 import goldMedal from "@assets/gold-medal.png";
 import silverMedal from "@assets/silver-medal.png";
 import bronzeMedal from "@assets/bronze-medal.png";
+import Loader from "@components/layouts/Loader";
 
 // il faudra mettre dans les props de la fonction, le tournoi
 function FinalRanking({ updateFullScreen }) {
@@ -117,7 +118,7 @@ function FinalRanking({ updateFullScreen }) {
       </div>
     </Container>
   ) : (
-    <div className="font-standard_font h-full w-full">Loading</div>
+    <Loader />
   );
 }
 
