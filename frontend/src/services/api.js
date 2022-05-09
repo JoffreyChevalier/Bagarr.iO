@@ -79,3 +79,10 @@ export const matchEnded = async (tournament, match) => {
     )
   ).data;
 };
+
+// Cloturer le tournoi
+export const tournamentEnded = async (tournament) => {
+  return (
+    await axios.post(`${API_URL}/tournaments/${tournament.id}/finalize.json`)
+  ).data;
+};
