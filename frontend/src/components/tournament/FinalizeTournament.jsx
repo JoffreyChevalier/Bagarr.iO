@@ -9,7 +9,7 @@ export default function FinalizeTournament({
       <div className=" flex justify-center mb-6">
         <button
           type="button"
-          className="mt-8 bg-first_color hover:bg-second_color text-white font-standard_font text-xl py-2 px-4 rounded-full"
+          className="my-8 bg-first_color text-white font-standard_font text-xl py-2 px-4 rounded-full hover:bg-first_color_d hover:scale-105 hover:drop-shadow-lg active:scale-100"
           onClick={onClick}
         >
           Rajouter un joueur

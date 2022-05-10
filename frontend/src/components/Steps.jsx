@@ -24,7 +24,7 @@ export default function Steps({ stepCount, currentStep }) {
                 >
                   <div className="h-0.5 w-full bg-[#BA8208]" />
                 </div>
-                <div className="relative w-8 h-8 flex items-center justify-center bg-[#BA8208] rounded-full hover:bg-[#9A373F]">
+                <div className="relative w-8 h-8 flex items-center justify-center bg-[#BA8208] rounded-full ">
                   <CheckIcon
                     className="w-5 h-5 text-white"
                     aria-hidden="true"

@@ -86,7 +86,7 @@ export default function ModalHint({ buttonClass }) {
                 <div className="actions flex mt-8 items-center justify-start w-full">
                   <button
                     type="button"
-                    className="button focus:outline-none transition duration-150 ease-in-out hover:bg-indigo-600 bg-[#BA8208] rounded text-white px-8 py-2 text-sm"
+                    className="button focus:outline-none transition duration-150 ease-in-out hover:bg-first_color_d 0 bg-[#BA8208] rounded text-white px-8 py-2 text-sm"
                     onClick={() => {
                       close();
                     }}
