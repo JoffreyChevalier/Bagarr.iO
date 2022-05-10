@@ -5,17 +5,14 @@ export default function FinalizeTournament({
 }) {
   return (
     <div>
-      <h1 className="text-center mb-12 font-title_font text-2xl">
-        🏆 Récap 🏆
-      </h1>
-      <h2 className="font-standard_font text-xl mb-2">Liste des joueurs :</h2>
+      <h1 className="text-center mb-4 font-title_font text-3xl">🏆 Récap 🏆</h1>
       <div className=" flex justify-center mb-6">
         <button
           type="button"
           className="mt-8 bg-first_color hover:bg-second_color text-white font-standard_font text-xl py-2 px-4 rounded-full"
           onClick={onClick}
         >
-          Ajouter un joueur
+          Rajouter un joueur
         </button>
       </div>
       <div className="flex justify-center flex-wrap gap-x-10">
@@ -31,11 +28,12 @@ export default function FinalizeTournament({
               <p className="text-md font-bold">{player.name}</p>
             </div>
             <button
-              className="py-1 px-1 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-[#9A373F] hover:text-[#9A373F] hover:bg-white"
               type="button"
+              title="Supprimer le joueur"
+              className="relative left-5 bottom-28 ml-2 bg-red-700 text-white font-standard_font text-sm px-2 rounded-full hover:bg-red-800 hover:scale-110 hover:drop-shadow-lg active:scale-100"
               onClick={() => onDeleteClick(player)}
             >
-              Supprimer
+              X
             </button>
           </div>
         ))}

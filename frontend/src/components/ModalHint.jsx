@@ -19,7 +19,7 @@ export default function ModalHint({ buttonClass }) {
       >
         {(close) => (
           <div>
-            <div className="container mx-auto w-11/12 md:w-2/2 max-w-xxl">
+            <div className="container m-4 w-11/12 md:w-2/2 max-w-xxl">
               <div className="modal relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
                 {/* eslint-disable-next-line */}
                 <div
@@ -48,7 +48,7 @@ export default function ModalHint({ buttonClass }) {
                   {" "}
                   Bagarr.iO, comment ça fonctionne ?{" "}
                 </h1>
-                <div className="content font-standard_font">
+                <div className="content text-sm sm:text-lg font-standard_font">
                   Cliquez sur le bouton START pour lancer le paramétrage de
                   votre tournoi. <br />
                   <br />

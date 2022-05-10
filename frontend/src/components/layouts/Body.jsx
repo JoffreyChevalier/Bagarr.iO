@@ -9,7 +9,7 @@ function Body({ children, fullScreen = false }) {
         <div>{children}</div>
       ) : (
         <div>
-          <div className="m-8 px-12 border backdrop-blur-md text-black shadow-xl rounded-xl">
+          <div className="m-4 sm:m-8 px-6 sm:px-12 border backdrop-blur-md text-black shadow-xl rounded-xl">
             <div className="flex-col justify-center pb-12">
               <Link to="/">
                 <img className="w-24 my-12" src={logo} alt="logo d'un point" />
