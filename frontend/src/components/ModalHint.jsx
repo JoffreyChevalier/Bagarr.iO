@@ -20,7 +20,7 @@ export default function ModalHint({ buttonClass }) {
         {(close) => (
           <div>
             <div className="container m-4 w-11/12 md:w-2/2 max-w-xxl">
-              <div className="modal relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
+              <div className="modal relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400 overflow-y-scroll">
                 {/* eslint-disable-next-line */}
                 <div
                   className="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out"
@@ -52,16 +52,18 @@ export default function ModalHint({ buttonClass }) {
                   Cliquez sur le bouton START pour lancer le paramétrage de
                   votre tournoi. <br />
                   <br />
-                  Étape 1 <br />
-                  <br />
+                  <h1 className="text-black text-xl font-lg font-title_font tracking-normal leading-tight mb-4">
+                    Étape 1{" "}
+                  </h1>
                   Sur la page qui s’affiche, vous allez pouvoir rentrer le nom
                   que vous voulez donner à votre compétition.
                   <br />
                   Cliquez sur le bouton suivant pour continuer
                   <br />
                   <br />
-                  Étape 2 <br />
-                  <br />
+                  <h1 className="text-black text-xl font-lg font-title_font tracking-normal leading-tight mb-4">
+                    Étape 2{" "}
+                  </h1>
                   La page qui s’affiche vous permet d’ajouter les joueurs qui
                   vont participer. Rentrez le nom ou pseudo du joueur et cliquez
                   sur le bouton « avatar suivant… » pour choisir son avatar.
@@ -72,8 +74,9 @@ export default function ModalHint({ buttonClass }) {
                   Cliquez sur le bouton suivant pour continuer
                   <br />
                   <br />
-                  Étape 3 <br />
-                  <br />
+                  <h1 className="text-black text-xl font-lg font-title_font tracking-normal leading-tight mb-4">
+                    Étape 3{" "}
+                  </h1>
                   La page qui s’affiche vous permet de voir un ré-cap du tournoi
                   qui va être lancé. Vous pouvez ajouter ou supprimer des
                   joueurs si nécessaire.
