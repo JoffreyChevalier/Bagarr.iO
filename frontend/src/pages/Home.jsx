@@ -16,10 +16,9 @@ function Home() {
         <div className="acroche">
           <p className="font-standard_font text-lg">
             Bienvenue sur Bagarr.iO, le générateur en ligne de tournois.
-            Affrontez vos amis à tous vos jeux ou sport préférés et voyez en
+            Affrontez vos amis sur tous vos jeux ou sport préférés et voyez en
             temps réel l’avancée de votre compétition ! Paramétrez en quelques
-            secondes votre tournoi et laissé vous guidez au fur et mesures des
-            matchs qui sont générés automatiquement.
+            secondes votre tournoi et laissez-vous guider par notre application.
             <br />
             GET READY TO RUMBLE !{" "}
           </p>
