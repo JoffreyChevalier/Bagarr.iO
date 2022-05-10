@@ -19,6 +19,7 @@ function App() {
   const [tournamentPlayers, setTournamentPlayers] = useState([]);
   // state pour passer le tournoi dans le composant final ranking (on est obligé d'avoir l'id en cours du tournoi)
   const [tournament, setTournament] = useState();
+  const [fullScreen, setFullScreen] = useState(false);
 
   // step 1. dans APP: Tournament => Vide
   // step 2. on passe tournament vide à Create Tournament et la fonction de set
@@ -36,29 +37,32 @@ function App() {
   }
 
   return (
-    <div className="App bg-fixed flex justify-center items-center min-h-screen">
-      <div>
-        {/* <WorkingNavbar /> */}
-        <TournamentContext.Provider value={getTournamentContext()}>
-          <Routes>
-            <Route path="/loader" element={<Loader />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/formulaires" element={<Formulaire />} />
-            <Route path="/mentionslegales" element={<MentionsLegales />} />
-            <Route path="/creer-un-tournoi" element={<CreateTournament />} />
-            <Route path="/timer" element={<Timer />} />
-            <Route path="/tournois" element={<Tournament />} />
-            <Route
-              path="/tournois/:tournamentId/classement"
-              element={<FinalRanking />}
-            />
-            <Route
-              path="/tournois/:tournamentId/matchs"
-              element={<MatchesPage />}
-            />
-          </Routes>
-        </TournamentContext.Provider>
-      </div>
+    <div
+      className={
+        fullScreen
+          ? "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border border-gray-300 rounded-xl"
+          : "App w-screen bg-fixed flex justify-center items-center min-h-screen"
+      }
+    >
+      <TournamentContext.Provider value={getTournamentContext()}>
+        <Routes>
+          <Route path="/loader" element={<Loader />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/formulaires" element={<Formulaire />} />
+          <Route path="/mentionslegales" element={<MentionsLegales />} />
+          <Route path="/creer-un-tournoi" element={<CreateTournament />} />
+          <Route path="/timer" element={<Timer />} />
+          <Route path="/tournois" element={<Tournament />} />
+          <Route
+            path="/tournois/:tournamentId/classement"
+            element={<FinalRanking updateFullScreen={setFullScreen} />}
+          />
+          <Route
+            path="/tournois/:tournamentId/matchs"
+            element={<MatchesPage />}
+          />
+        </Routes>
+      </TournamentContext.Provider>
     </div>
   );
 }

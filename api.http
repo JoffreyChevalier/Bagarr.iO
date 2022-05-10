@@ -60,13 +60,13 @@ content-type: application/json
 ###
 
 # DEMARRER LE TOURNOI
-POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11118735/start.json
+POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11140901/start.json
 content-type: application/json
 
 ###
 
 # AFFICHER LES MATCHS DU TOURNOI
-GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11121900/matches.json
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11140901/matches.json
 
 ###
 
@@ -88,7 +88,7 @@ content-type: application/json
 ###
 
 # CLOTURER LE TOURNOI
-POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11121900/finalize.json
+POST https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11128933/finalize.json
 
 ###
 
@@ -108,12 +108,12 @@ GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v
 ###
 
 # LISTE DES PARTICIPANTS A UN TOURNOI
-GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11124625/participants.json
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11128933/participants.json
 
 ###
 
 # AFFICHER UN PARTICIPANT DU TOURNOI
-GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11121821/participants/170107295.json 
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11121821/participants/11140845.json 
 
 ###
 
@@ -123,7 +123,7 @@ GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v
 ###
 
 # EFFACER UN TOURNOI 
-DELETE https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11118334.json
+DELETE https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11140877.json
 
 ###
 
@@ -133,7 +133,7 @@ DELETE https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.co
 ###
 
 # AFFICHER UN TOURNOI
-GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11121821.json
+GET https://GrischK:g1VM2bDNu0DJZx1ALp5wfYx2QsRaqZ8bugIl76ZE@api.challonge.com/v1/tournaments/11128933.json
 
 ###
 

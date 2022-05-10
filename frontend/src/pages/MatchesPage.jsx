@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { getParticipants, getTournamentMatches } from "@services/api";
+import {
+  getParticipants,
+  getTournamentMatches,
+  tournamentEnded,
+} from "@services/api";
 import MatchesTour from "@components/MatchesTour";
 import NextButton from "@components/layouts/NextButton";
 import PreviousButton from "@components/layouts/PreviousButton";
@@ -29,7 +33,6 @@ function MatchesPage() {
     );
   }
 
-  // Permet de déterminer combien il y a des rounds au total dans le total. Sert notamment à afficher le "Round 1/x" (x = dernier round)
   function getLastRound() {
     if (!tournamentMatches.length) {
       return "...";
@@ -48,6 +51,8 @@ function MatchesPage() {
     fetchData();
   }, []);
 
+  // Permet de déterminer combien il y a des rounds au total dans le total. Sert notamment à afficher le "Round 1/x" (x = dernier round)
+
   // Permet de passer au round précédent
   function onPrevRound() {
     if (round <= 1) {
@@ -63,6 +68,7 @@ function MatchesPage() {
     }
 
     if (isTournamentEnded()) {
+      await tournamentEnded({ id: tournamentId });
       navigate(`/tournois/${tournamentId}/classement`);
       return;
     }
@@ -76,7 +82,7 @@ function MatchesPage() {
   return tournamentMatches && tournamentMatches.length ? (
     <Body>
       <div>
-        <h1 className="font-title_font text-6xl text-center mb-10">
+        <h1 className="font-title_font text-5xl text-center">
           Tour {round} / {getLastRound()}
         </h1>
 
@@ -121,7 +127,7 @@ function MatchesPage() {
                   </svg>
                 </span>
                 <span className="absolute flex items-center justify-center w-full h-full text-first_color transition-all duration-300 transform group-hover:translate-x-full ease">
-                  Résultats
+                  Résultat
                 </span>
                 <span className="relative invisible">Button Text</span>
               </button>

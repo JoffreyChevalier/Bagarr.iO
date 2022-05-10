@@ -16,9 +16,9 @@ import Body from "@components/layouts/Body";
 import Loader from "@components/layouts/Loader";
 import Timer from "./Timer";
 
-// function FinalizeTournament() {
-//   return <h1>ETAPE 3</h1>;
-// }
+function isReplaying() {
+  return new URLSearchParams(window.location.search).has("replay");
+}
 
 function CreateTournament() {
   const {
@@ -29,8 +29,9 @@ function CreateTournament() {
     tournament,
     setTournament,
   } = useContext(TournamentContext);
+
   const navigate = useNavigate();
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(isReplaying() ? 3 : 1);
   const [isLoading, setIsLoading] = useState(false);
   // Au clic sur PREV MàJ du numéro d'étape (-1)
   function onPrevStep() {
@@ -50,12 +51,23 @@ function CreateTournament() {
       const response = await createTournamentApi({ name: tournamentName });
       setTournament(response.tournament);
     } else if (step === 3) {
+      if (isReplaying()) {
+        const responseStart = await startTournament(tournament);
+        console.warn(responseStart);
+        setStep(step + 1);
+      } else {
+        const response = await addMassPlayers(tournament, tournamentPlayers);
+        console.warn(response);
+        const responseStart = await startTournament(tournament);
+        console.warn(responseStart);
+        setStep(step + 1);
+      }
       // appel api ajout des joueurs en masse
-      const response = await addMassPlayers(tournament, tournamentPlayers);
-      console.warn(response);
-      const responseStart = await startTournament(tournament);
-      setStep(step + 1);
-      console.warn(responseStart);
+      // const response = await addMassPlayers(tournament, tournamentPlayers);
+      // console.warn(response);
+      // const responseStart = await startTournament(tournament);
+      // setStep(step + 1);
+      // console.warn(responseStart);
     }
 
     // Au clic sur PREV MàJ du numéro d'étape (+1)
