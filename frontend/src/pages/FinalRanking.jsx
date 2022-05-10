@@ -26,7 +26,7 @@ function FinalRanking({ updateFullScreen }) {
 
   useEffect(() => {
     const fetchTournamentsParticipants = async () => {
-      updateFullScreen(true);
+      updateFullScreen(false);
 
       setTimeout(() => {
         setAnimateCardLeft(
@@ -61,8 +61,10 @@ function FinalRanking({ updateFullScreen }) {
       <div className="flex flex-col gap-y-12 pt-20 h-full">
         <Confetti numberOfPieces={500} recycle={false} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-10 grid-rows-1 gap-y-8">
-          <div className={`lg:col-span-3 transform ${animateCardLeft}`}>
+        <div className="grid grid-cols-1 lg:grid-cols-10 grid-rows-1 gap-y-8 ">
+          <div
+            className={`lg:col-span-3 transform bg-[url('./assets/background_image.jpg')]  ${animateCardLeft}`}
+          >
             <FinalRankingCard
               avatarImg={`${tournamentParticipants[1].participant.misc}`}
               playerName={`${tournamentParticipants[1].participant.display_name}`}
@@ -71,7 +73,7 @@ function FinalRanking({ updateFullScreen }) {
             />
           </div>
 
-          <div className="lg:col-span-4 z-10 bg-white row-start-1 lg:row-auto">
+          <div className="lg:col-span-4 z-10 bg-[url('./assets/background_image_gold.jpg')] row-start-1 lg:row-auto">
             <FinalRankingCard
               avatarImg={`${tournamentParticipants[0].participant.misc}`}
               playerName={`${tournamentParticipants[0].participant.display_name}`}
@@ -80,7 +82,9 @@ function FinalRanking({ updateFullScreen }) {
             />
           </div>
 
-          <div className={`lg:col-span-3 transform ${animateCardRight}`}>
+          <div
+            className={`lg:col-span-3 transform bg-[url('./assets/background_image_bronze.jpg')] ${animateCardRight}`}
+          >
             <FinalRankingCard
               avatarImg={`${tournamentParticipants[2].participant.misc}`}
               playerName={`${tournamentParticipants[2].participant.display_name}`}
@@ -92,12 +96,14 @@ function FinalRanking({ updateFullScreen }) {
 
         <div>
           <div className="w-full h-12 border-t" />
-          <h5 className="text-[#9A373F] font-bold text-xl pb-8">Classement</h5>
+          <h5 className="text-[#9A373F] text-center font-bold text-xl pb-8">
+            Classement
+          </h5>
           <ul>
             {tournamentParticipants.slice(3).map((participant) => (
               <li
                 key={participant.participant.display_name}
-                className="flex flex-row justify-between font-standard_font text-xl font-bold"
+                className="flex flex-row justify-between font-standard_font text-xl font-bold m-auto sm:w-1/2 w-full"
               >
                 <p>{participant.participant.display_name}</p>
                 <p>{participant.participant.final_rank} ème</p>
@@ -126,7 +132,9 @@ function FinalRanking({ updateFullScreen }) {
       </div>
     </Container>
   ) : (
-    <Loader />
+    <div className="w-48">
+      <Loader />
+    </div>
   );
 }
 

@@ -41,31 +41,28 @@ function App() {
       className={
         fullScreen
           ? "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border border-gray-300 rounded-xl"
-          : "App bg-fixed flex justify-center items-center min-h-screen"
+          : "App w-screen bg-fixed flex justify-center items-center min-h-screen"
       }
     >
-      <div>
-        {/* <WorkingNavbar /> */}
-        <TournamentContext.Provider value={getTournamentContext()}>
-          <Routes>
-            <Route path="/loader" element={<Loader />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/formulaires" element={<Formulaire />} />
-            <Route path="/mentionslegales" element={<MentionsLegales />} />
-            <Route path="/creer-un-tournoi" element={<CreateTournament />} />
-            <Route path="/timer" element={<Timer />} />
-            <Route path="/tournois" element={<Tournament />} />
-            <Route
-              path="/tournois/:tournamentId/classement"
-              element={<FinalRanking updateFullScreen={setFullScreen} />}
-            />
-            <Route
-              path="/tournois/:tournamentId/matchs"
-              element={<MatchesPage />}
-            />
-          </Routes>
-        </TournamentContext.Provider>
-      </div>
+      <TournamentContext.Provider value={getTournamentContext()}>
+        <Routes>
+          <Route path="/loader" element={<Loader />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/formulaires" element={<Formulaire />} />
+          <Route path="/mentionslegales" element={<MentionsLegales />} />
+          <Route path="/creer-un-tournoi" element={<CreateTournament />} />
+          <Route path="/timer" element={<Timer />} />
+          <Route path="/tournois" element={<Tournament />} />
+          <Route
+            path="/tournois/:tournamentId/classement"
+            element={<FinalRanking updateFullScreen={setFullScreen} />}
+          />
+          <Route
+            path="/tournois/:tournamentId/matchs"
+            element={<MatchesPage />}
+          />
+        </Routes>
+      </TournamentContext.Provider>
     </div>
   );
 }
