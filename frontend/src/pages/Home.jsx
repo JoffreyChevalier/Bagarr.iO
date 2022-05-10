@@ -1,5 +1,6 @@
 import Footer from "@components/layouts/Footer";
 import StartButton from "@components/StartButton";
+import ModalHint from "@components/ModalHint";
 
 function Home() {
   return (
@@ -27,6 +28,9 @@ function Home() {
           </div>
           <div className="flex justify-center py-8">
             <StartButton />
+          </div>
+          <div className="flex justify-center mt-8">
+            <ModalHint buttonClass="flex items-center bg-first_color rounded-full text-white drop-shadow-md h-8 px-4 py-1 text-md font-standard_font hover:bg-first_color_d hover:scale-105 hover:drop-shadow-lg active:scale-100" />
           </div>
         </div>
       </div>

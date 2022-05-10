@@ -6,7 +6,12 @@ export default function ModalHint({ buttonClass }) {
       <Popup
         trigger={
           <button type="button" className={buttonClass}>
-            guide
+            Comment jouer ?{" "}
+            <img
+              src=".\src\assets\hello.png"
+              className="ml-2 h-4 animate-waving-hand"
+              alt="hand"
+            />
           </button>
         }
         modal
@@ -39,7 +44,7 @@ export default function ModalHint({ buttonClass }) {
                     <line x1={6} y1={6} x2={18} y2={18} />
                   </svg>
                 </div>
-                <h1 className="header text-black text-xl font-lg font-title_font tracking-normal leading-tight mb-4">
+                <h1 className="text-black text-xl font-lg font-title_font tracking-normal leading-tight mb-4">
                   {" "}
                   Bagarr.iO, comment ça fonctionne ?{" "}
                 </h1>
