@@ -4,7 +4,11 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import Container from "@components/ranking/Container";
 import FinalRankingCard from "@components/ranking/FinalRankingCard";
 import TButton from "@components/TButton";
-import { getParticipants, tournamentReinitialized } from "@services/api";
+import {
+  getParticipants,
+  tournamentReinitialized,
+  startTournament,
+} from "@services/api";
 import Confetti from "@components/Confetti";
 
 import goldMedal from "@assets/gold-medal.png";
@@ -53,7 +57,9 @@ function FinalRanking({ updateFullScreen }) {
 
   async function playAgain() {
     await tournamentReinitialized({ id: tournamentId });
-    navigate(`/creer-un-tournoi?replay`);
+    await startTournament({ id: tournamentId });
+    // navigate(`/creer-un-tournoi?replay`);
+    navigate(`/tournois/${tournamentId}/matchs?replay`);
   }
 
   return tournamentParticipants && tournamentParticipants.length ? (
