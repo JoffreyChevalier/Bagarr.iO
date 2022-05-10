@@ -34,7 +34,7 @@ function TournamentCard({ matchIndex, match, players, onFinished }) {
   }
 
   return isSend === false ? (
-    <div className="m-8">
+    <div className="mb-8 sm:m-8">
       <h1 className="font-standard_font mb-10 font-bold text-3xl">
         Match {matchIndex}
       </h1>
@@ -58,7 +58,7 @@ function TournamentCard({ matchIndex, match, players, onFinished }) {
         </div>
         <button
           type="button"
-          className="relative bottom-6 bg-third_color rounded-full text-white drop-shadow-md h-12 px-4 py-1 text-md font-standard_font hover:bg-second_color hover:scale-105 active:scale-100"
+          className="relative bottom-6 bg-second_color rounded-full text-white drop-shadow-md h-12 px-4 py-1 text-md font-standard_font hover:bg-second_color_d hover:scale-110 hover:drop-shadow-lg active:scale-100"
           onClick={() => {
             onSubmitScores();
             onSendMatchClick();
@@ -69,7 +69,7 @@ function TournamentCard({ matchIndex, match, players, onFinished }) {
       </div>
     </div>
   ) : (
-    <div className="m-8">
+    <div className="mb-8 sm:m-8">
       <h1 className="font-standard_font mb-10 font-bold text-gray-400 text-3xl">
         Match {matchIndex}
       </h1>
@@ -95,7 +95,7 @@ function TournamentCard({ matchIndex, match, players, onFinished }) {
         </div>
         <button
           type="button"
-          className="relative bottom-6 bg-gray-400 rounded-full text-white drop-shadow-md h-12 px-4 py-1 text-md font-standard_font hover:bg-second_color hover:scale-105 active:scale-100"
+          className="relative bottom-6 bg-gray-400 rounded-full text-white drop-shadow-md h-12 px-4 py-1 text-md font-standard_font hover:bg-gray-600 hover:scale-110 hover:drop-shadow-lg active:scale-100"
           onClick={() => onSendMatchClick()}
         >
           Changer Score

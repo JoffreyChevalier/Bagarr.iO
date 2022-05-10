@@ -82,7 +82,7 @@ function MatchesPage() {
   return tournamentMatches && tournamentMatches.length ? (
     <Body>
       <div>
-        <h1 className="font-title_font text-5xl text-center">
+        <h1 className="font-title_font text-5xl mb-8 text-center">
           Tour {round} / {getLastRound()}
         </h1>
 
