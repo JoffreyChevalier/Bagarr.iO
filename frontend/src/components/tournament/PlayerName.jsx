@@ -1,4 +1,4 @@
-export default function PlayerName({ name, onChangeName }) {
+export default function PlayerName({ name, onChangeName, handleKeyPress }) {
   return (
     <div className="flex button_players">
       <div className="flex justify-center">
@@ -7,8 +7,9 @@ export default function PlayerName({ name, onChangeName }) {
           <input
             value={name}
             onChange={(event) => onChangeName(event.target.value)}
+            onKeyDown={handleKeyPress}
             placeholder="Nom du joueur"
-            required="required"
+            required
             className="form-select appearance-none
         block
         w-full

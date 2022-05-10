@@ -1,4 +1,5 @@
 import TournamentCard from "@components/tournamentCard/TournamentCard";
+import Loader from "./layouts/Loader";
 
 function MatchesTour({ tournamentMatches, players, onMatchFinished }) {
   return (
@@ -21,7 +22,7 @@ function MatchesTour({ tournamentMatches, players, onMatchFinished }) {
             />
           ))
         ) : (
-          <p>Chargement des matches</p>
+          <Loader />
         )}
       </div>
     </div>

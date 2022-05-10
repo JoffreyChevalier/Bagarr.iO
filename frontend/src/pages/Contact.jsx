@@ -11,9 +11,9 @@ export default function Form() {
       {submit ? (
         <p>Merci pour vos retours !</p>
       ) : (
-        <div className="max-w-7xl mx-auto justify-center">
-          <div>
-            <h2 className="text-4xl  font-title_font mb-8">Contact</h2>
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col items-center">
+            <h2 className="text-4xl font-title_font mb-8">Contact</h2>
             <h3 className="text-lg font-standard_font tracking-tight ">
               Une question, un bug, une suggestion, n'hésitez pas à nous écrire
               pour nous en faire part
@@ -23,7 +23,7 @@ export default function Form() {
             <form
               action="#"
               method="POST"
-              className="flex flex-col gap-y-6 w-full"
+              className="flex flex-col items-center gap-y-6 w-full"
             >
               <div className="flex flex-row items-center ">
                 <label htmlFor className=" pr-8">
