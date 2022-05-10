@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 import Container from "@components/ranking/Container";
 import FinalRankingCard from "@components/ranking/FinalRankingCard";
 import TButton from "@components/TButton";
-import { getParticipants } from "@services/api";
+import { getParticipants, tournamentReinitialized } from "@services/api";
 import Confetti from "@components/Confetti";
 
 import goldMedal from "@assets/gold-medal.png";
@@ -14,6 +14,7 @@ import Loader from "@components/layouts/Loader";
 
 // il faudra mettre dans les props de la fonction, le tournoi
 function FinalRanking({ updateFullScreen }) {
+  const navigate = useNavigate();
   const { tournamentId } = useParams();
   const [tournamentParticipants, setTournamentParticipants] = useState();
   const [animateCardLeft, setAnimateCardLeft] = useState(
@@ -49,6 +50,11 @@ function FinalRanking({ updateFullScreen }) {
 
     fetchTournamentsParticipants();
   }, []);
+
+  async function playAgain() {
+    await tournamentReinitialized({ id: tournamentId });
+    navigate(`/creer-un-tournoi?replay`);
+  }
 
   return tournamentParticipants && tournamentParticipants.length ? (
     <Container>
@@ -101,14 +107,16 @@ function FinalRanking({ updateFullScreen }) {
         </div>
 
         <div className="flex flex-col gap-y-5 w-full items-center pb-12">
+          <Link to="/">
+            <TButton
+              variant="secondary"
+              buttonClass="text-[##FFFFFF] h-16 w-48 text-xl"
+            >
+              FIN
+            </TButton>
+          </Link>
           <TButton
-            variant="secondary"
-            buttonClass="text-[##FFFFFF] h-16 w-48 text-xl"
-          >
-            FIN
-          </TButton>
-
-          <TButton
+            onClick={playAgain}
             variant="secondary"
             buttonClass="text-[##FFFFFF] h-16 w-48 text-xl"
           >

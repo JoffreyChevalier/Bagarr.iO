@@ -86,3 +86,9 @@ export const tournamentEnded = async (tournament) => {
     await axios.post(`${API_URL}/tournaments/${tournament.id}/finalize.json`)
   ).data;
 };
+
+export const tournamentReinitialized = async (tournament) => {
+  return (
+    await axios.post(`${API_URL}/tournaments/${tournament.id}/reset.json`)
+  ).data;
+};
