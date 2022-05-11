@@ -88,35 +88,39 @@ function FinalRanking({ updateFullScreen }) {
             />
           </div>
 
-          <div
-            className={`lg:col-span-3 transform bg-[url('./assets/background_image_bronze.jpg')] ${animateCardRight}`}
-          >
-            <FinalRankingCard
-              avatarImg={`${tournamentParticipants[2].participant.misc}`}
-              playerName={`${tournamentParticipants[2].participant.display_name}`}
-              medalImg={bronzeMedal}
-              points="3 ème"
-            />
-          </div>
+          {tournamentParticipants.length > 2 && (
+            <div
+              className={`lg:col-span-3 transform bg-[url('./assets/background_image_bronze.jpg')] ${animateCardRight}`}
+            >
+              <FinalRankingCard
+                avatarImg={`${tournamentParticipants[2].participant.misc}`}
+                playerName={`${tournamentParticipants[2].participant.display_name}`}
+                medalImg={bronzeMedal}
+                points="3 ème"
+              />
+            </div>
+          )}
         </div>
 
-        <div>
-          <div className="w-full h-12 border-t" />
-          <h5 className="text-[#9A373F] text-center font-bold text-xl pb-8">
-            Classement
-          </h5>
-          <ul>
-            {tournamentParticipants.slice(3).map((participant) => (
-              <li
-                key={participant.participant.display_name}
-                className="flex flex-row justify-between font-standard_font text-xl font-bold m-auto sm:w-1/2 w-full"
-              >
-                <p>{participant.participant.display_name}</p>
-                <p>{participant.participant.final_rank} ème</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {tournamentParticipants.length > 3 && (
+          <div>
+            <div className="w-full h-12 border-t" />
+            <h5 className="text-[#9A373F] text-center font-bold text-xl pb-8">
+              Classement
+            </h5>
+            <ul>
+              {tournamentParticipants.slice(3).map((participant) => (
+                <li
+                  key={participant.participant.display_name}
+                  className="flex flex-row justify-between font-standard_font text-xl font-bold m-auto sm:w-1/2 w-full"
+                >
+                  <p>{participant.participant.display_name}</p>
+                  <p>{participant.participant.final_rank} ème</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="flex flex-col gap-y-5 w-full items-center pb-12">
           <a href="/">
