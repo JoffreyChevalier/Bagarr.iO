@@ -25,8 +25,8 @@ export default function Form() {
               method="POST"
               className="flex flex-col items-center gap-y-6 w-full"
             >
-              <div className="flex flex-row items-center ">
-                <label htmlFor className=" pr-8">
+              <div className="flex flex-row items-center w-3/5 lg:w-2/5">
+                <label htmlFor="objet" className="w-full">
                   Objet
                   <input
                     type="text"
@@ -37,8 +37,8 @@ export default function Form() {
                   />
                 </label>
               </div>
-              <div className="flex flex-row items-center ">
-                <label htmlFor className=" pr-8">
+              <div className="flex flex-row items-center w-3/5 lg:w-2/5 ">
+                <label htmlFor="name" className="w-full">
                   Nom
                   <input
                     id="name"
@@ -49,8 +49,8 @@ export default function Form() {
                   />
                 </label>
               </div>
-              <div className="flex flex-row items-center ">
-                <label htmlFor="prenom" className=" pr-8">
+              <div className="flex flex-row items-center w-3/5 lg:w-2/5 ">
+                <label htmlFor="prenom" className="w-full">
                   Prénom
                   <input
                     type="text"
@@ -61,8 +61,8 @@ export default function Form() {
                   />
                 </label>
               </div>
-              <div className="flex flex-row items-center ">
-                <label htmlFor="email" className=" pr-8">
+              <div className="flex flex-row items-center w-3/5 lg:w-2/5">
+                <label htmlFor="email" className="w-full">
                   Email
                   <input
                     id="email"
@@ -73,8 +73,8 @@ export default function Form() {
                   />
                 </label>
               </div>
-              <div className="flex flex-row items-center ">
-                <label htmlFor="message" className=" pr-8">
+              <div className="flex flex-row items-center w-3/5 lg:w-2/5">
+                <label htmlFor="message" className="w-full">
                   Message
                   <textarea
                     id="message"
