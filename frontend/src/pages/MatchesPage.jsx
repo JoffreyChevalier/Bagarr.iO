@@ -99,10 +99,6 @@ function MatchesPage() {
             <PreviousButton onClick={onPrevRound} />
           </div>
 
-          <p className="text-center text-xl font-standard_font">
-            Round {round}/{getLastRound()}{" "}
-          </p>
-
           {isTournamentEnded() ? (
             <div>
               <button
