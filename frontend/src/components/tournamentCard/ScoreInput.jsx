@@ -2,6 +2,9 @@ function SetScoreButton({ value, onChangeScore }) {
   return (
     <div>
       <input
+        type="number"
+        min={0}
+        max={99}
         value={value}
         onChange={(event) => onChangeScore(event.target.value)}
         placeholder="Score"
