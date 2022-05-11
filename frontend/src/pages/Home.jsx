@@ -20,7 +20,6 @@ function Home() {
             <br />
             GET READY TO RUMBLE !
           </p>
-          <div className="flex justify-center mt-8" />
         </div>
         <div className="flex justify-center py-8">
           <StartButton />

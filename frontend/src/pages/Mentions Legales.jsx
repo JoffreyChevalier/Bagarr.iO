@@ -4,7 +4,7 @@ function MentionsLegales() {
   return (
     <Body>
       {" "}
-      <h1 className="font-title_font text-5xl text-center mb-12">
+      <h1 className="font-title_font text-4xl text-center mb-12">
         Mentions légales
       </h1>
       <div className="flex-col font-standard_font">
