@@ -9,7 +9,7 @@ export default function Form() {
   return (
     <Body>
       {submit ? (
-        <p>Merci pour vos retours !</p>
+        <p className="text-center">👍Merci pour vos retours !👋</p>
       ) : (
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center">
