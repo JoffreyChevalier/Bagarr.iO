@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const { createProxyMiddleware } = require("http-proxy-middleware");
+const router = require("./router");
 
 // let's create express app
 
@@ -19,6 +20,7 @@ app.use(
 // On envoie toutes les requêtes commençant par /tournaments
 // vers L'API challonge
 app.use(
+  "/tournaments*",
   createProxyMiddleware({
     pathFilter: "/tournaments*",
     target: "https://api.challonge.com/v1",
@@ -29,12 +31,19 @@ app.use(
 );
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../public")));
 
-// load router
-const router = require("./router");
+// Serve REACT APP
+app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
 
+// API routes
 app.use(router);
+
+// Redirect all requests to the REACT app
+app.get("*", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "..", "..", "frontend", "dist", "index.html")
+  );
+});
 
 // ready to export
 module.exports = app;
