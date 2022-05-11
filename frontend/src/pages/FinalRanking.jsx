@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import Container from "@components/ranking/Container";
 import FinalRankingCard from "@components/ranking/FinalRankingCard";
@@ -119,14 +119,15 @@ function FinalRanking({ updateFullScreen }) {
         </div>
 
         <div className="flex flex-col gap-y-5 w-full items-center pb-12">
-          <Link to="/">
+          <a href="/">
             <TButton
               variant="secondary"
               buttonClass="text-[##FFFFFF] h-16 w-48 text-xl"
             >
               FIN
             </TButton>
-          </Link>
+          </a>
+
           <TButton
             onClick={playAgain}
             variant="secondary"
