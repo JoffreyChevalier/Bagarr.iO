@@ -34,13 +34,16 @@ function TournamentPlayers({ players, onChange }) {
             <button
               type="button"
               title="Ajouter le joueur"
-              className="ml-2 bg-second_color text-white font-bold font-title_font text-xl px-2 rounded-full hover:bg-second_color_d hover:scale-110 hover:drop-shadow-lg active:scale-100"
+              className="h-10 w-10 ml-2 bg-second_color text-white font-bold font-title_font text-xl px-2 rounded-full hover:bg-second_color_d hover:scale-110 hover:drop-shadow-lg active:scale-100"
               onClick={onNewPlayerCreated}
             >
               +
             </button>
           ) : (
-            <span data-title="Entrez un nom" className="animate-waving-hand">
+            <span
+              data-title="Entrez un nom"
+              className="ml-2 animate-waving-hand"
+            >
               ❌
             </span>
           )}
