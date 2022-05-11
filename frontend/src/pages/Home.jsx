@@ -7,7 +7,7 @@ import logo from "@assets/logo_and_text.png";
 function Home() {
   return (
     <div className="flex-col item-center justify-center">
-      <div className="m-4 p-16 max-w-sm sm:max-w-lg lg:max-w-2xl border backdrop-blur-md text-black shadow-xl rounded-xl">
+      <div className="m-4 p-16 max-w-sm sm:max-w-lg lg:max-w-2xl border md:backdrop-blur-md text-black shadow-xl rounded-xl">
         <div className="flex justify-center pb-12">
           <img className="w-fit" src={logo} alt="logo d'un point" />
         </div>

@@ -124,12 +124,19 @@ function CreateTournament() {
             <div>
               <PreviousButton onClick={onPrevStep} />
             </div>
-
             <Steps stepCount={3} currentStep={step} />
-
-            <div>
-              <NextButton onClick={onNextStep} />
-            </div>
+            {tournamentName ? (
+              <div>
+                <NextButton onClick={onNextStep} />
+              </div>
+            ) : (
+              <span
+                data-title="Entrez un nom de tournoi"
+                className="ml-2 animate-waving-hand"
+              >
+                ❌
+              </span>
+            )}
           </div>
         )}
       </>
