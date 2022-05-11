@@ -20,7 +20,7 @@ export default function ModalHint({ buttonClass }) {
         nested
       >
         {(close) => (
-          <div>
+          <div className="flex justify-center">
             <div className="container m-4 w-11/12 md:w-2/2 max-w-xxl">
               <div className="modal relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400 overflow-y-scroll">
                 {/* eslint-disable-next-line */}
@@ -68,10 +68,9 @@ export default function ModalHint({ buttonClass }) {
                   </h1>
                   La page qui s’affiche vous permet d’ajouter les joueurs qui
                   vont participer. Rentrez le nom ou pseudo du joueur et cliquez
-                  sur le bouton « avatar suivant… » pour choisir son avatar.
-                  Cliquez ensuite sur le bouton « + » pour ajouter ce joueur à
-                  la compétition. Recommencez chaque étape jusqu’à ce que tous
-                  les joueurs soient ajoutés.
+                  sur le bouton « choisir un avatar». Cliquez ensuite sur le
+                  bouton « + » pour ajouter ce joueur à la compétition.
+                  Recommencez jusqu’à ce que tous les joueurs soient ajoutés.
                   <br />
                   Cliquez sur le bouton suivant pour continuer
                   <br />
@@ -83,12 +82,12 @@ export default function ModalHint({ buttonClass }) {
                   qui va être lancé. Vous pouvez ajouter ou supprimer des
                   joueurs si nécessaire.
                   <br />
-                  Cliquez sur le bouton suivant pour continuer
+                  Cliquez sur le bouton suivant pour lancer le tournois.
                 </div>
                 <div className="actions flex mt-8 items-center justify-start w-full">
                   <button
                     type="button"
-                    className="button focus:outline-none transition duration-150 ease-in-out hover:bg-first_color_d 0 bg-[#BA8208] rounded text-white px-8 py-2 text-sm"
+                    className="button bg-first_color rounded text-white px-8 py-2 text-sm hover:bg-first_color_d hover:scale-105 hover:drop-shadow-lg active:scale-100"
                     onClick={() => {
                       close();
                     }}
