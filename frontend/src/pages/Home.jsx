@@ -2,16 +2,14 @@ import Footer from "@components/layouts/Footer";
 import StartButton from "@components/StartButton";
 import ModalHint from "@components/ModalHint";
 
+import logo from "@assets/logo_and_text.png";
+
 function Home() {
   return (
     <div className="flex-col item-center justify-center">
       <div className="m-4 h-fit p-16 max-w-sm sm:max-w-lg lg:max-w-2xl border backdrop-blur-md text-black shadow-xl rounded-xl">
         <div className="flex justify-center pb-12">
-          <img
-            className="w-fit"
-            src="./src/assets/logo_and_text.png"
-            alt="logo d'un point"
-          />
+          <img className="w-fit" src={logo} alt="logo d'un point" />
         </div>
         <div className="acroche">
           <p className="font-standard_font text-lg">
@@ -20,7 +18,7 @@ function Home() {
             temps réel l’avancée de votre compétition ! Paramétrez en quelques
             secondes votre tournoi et laissez-vous guider par notre application.
             <br />
-            GET READY TO RUMBLE !{" "}
+            GET READY TO RUMBLE !
           </p>
           <div className="flex justify-center mt-8" />
         </div>

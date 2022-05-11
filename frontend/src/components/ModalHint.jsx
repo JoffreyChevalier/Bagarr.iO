@@ -1,5 +1,7 @@
 import Popup from "reactjs-popup";
 
+import hello from "@assets/hello.png";
+
 export default function ModalHint({ buttonClass }) {
   return (
     <div>
@@ -8,7 +10,7 @@ export default function ModalHint({ buttonClass }) {
           <button type="button" className={buttonClass}>
             Comment jouer ?{" "}
             <img
-              src=".\src\assets\hello.png"
+              src={hello}
               className="ml-2 h-4 animate-waving-hand"
               alt="hand"
             />
