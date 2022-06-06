@@ -1,36 +1,36 @@
-import Counter from "@components/Counter";
-import logo from "@assets/logo.svg";
+import Footer from "@components/layouts/Footer";
+import StartButton from "@components/StartButton";
+import ModalHint from "@components/ModalHint";
 
-export default function Home() {
+import logo from "@assets/logo_and_text.png";
+
+function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div className="flex-col item-center justify-center">
+      <div className="m-4 p-16 max-w-sm sm:max-w-lg lg:max-w-2xl border md:backdrop-blur-md text-black shadow-xl rounded-xl">
+        <div className="flex justify-center pb-12">
+          <img className="w-fit" src={logo} alt="logo d'un point" />
+        </div>
+        <div className="acroche">
+          <p className="font-standard_font text-lg">
+            Bienvenue sur Bagarr.iO, le générateur en ligne de tournois.
+            Affrontez vos amis sur tous vos jeux ou sport préférés et voyez en
+            temps réel l’avancée de votre compétition ! Paramétrez en quelques
+            secondes votre tournoi et laissez-vous guider par notre application.
+            <br />
+            GET READY TO RUMBLE !
+          </p>
+        </div>
+        <div className="flex justify-center py-8">
+          <StartButton />
+        </div>
+        <div className="flex justify-center mt-8">
+          <ModalHint buttonClass="flex items-center bg-first_color rounded-full text-white drop-shadow-md h-8 px-4 py-1 text-md font-standard_font hover:bg-first_color_d hover:scale-105 hover:drop-shadow-lg active:scale-100" />
+        </div>
+      </div>
+      <Footer />
+    </div>
   );
 }
+
+export default Home;

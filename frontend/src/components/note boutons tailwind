@@ -1,0 +1,89 @@
+// import TButton from "@components/TButton";
+// import {
+// ArrowRightIcon as ArrowRightIconOutline,
+// ArrowLeftIcon as ArrowLeftIconOutline,
+// } from "@heroicons/react/outline";
+
+// // Exemples de boutons à personnaliser
+// function Formulaire() {
+// return (
+// <div>
+// <h1>ICI la page du Formulaire</h1>
+// <TButton variant="transparent">
+// <ArrowRightIconOutline className="h-5 w-5 text-[#70A288] " />
+// </TButton>
+
+// <TButton
+// variant="secondary"
+// rounded
+// buttonClass="text-[##FFFFFF] h-24 w-24 text-xl"
+// >
+// Prêt ?
+// </TButton>
+
+// <TButton variant="transparent">
+// <ArrowLeftIconOutline className="h-5 w-5 text-[#70A288]" />
+// </TButton>
+
+// <TButton variant="primary" buttonClass="text-[  #FFFFFF] text-sm">
+// Choisi ton avatar
+// </TButton>
+// </div>
+// );
+// }
+// export default Formulaire;
+
+/\*
+This example requires Tailwind CSS v2.0+
+
+This example requires some changes to your config:
+
+```
+// tailwind.config.js
+module.exports = {
+  // ...
+  plugins: [
+    // ...
+    require('@tailwindcss/forms'),
+  ],
+}
+```
+
+_/
+/_
+This example requires Tailwind CSS v2.0+
+
+This example requires some changes to your config:
+
+```
+// tailwind.config.js
+module.exports = {
+  // ...
+  plugins: [
+    // ...
+    require('@tailwindcss/forms'),
+  ],
+}
+```
+
+\*/
+
+---
+
+Boutons provisoires pour la page de création de tournoi
+{/_ <button
+            className="p-4 mx-8 items-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-[#9A373F] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            type="button"
+            onClick={onNextStep}
+          >
+NEXT
+</button> _/}
+
+Boutons provisoires pour la page de création de tournoi
+{/_ <button
+            className="p-4 mx-8 items-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-[#9A373F] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            type="button"
+            onClick={onPrevStep}
+          >
+PREV
+</button> _/}

@@ -1,0 +1,76 @@
+Concept : 
+
+Site de création de tournoi personnalisé. On aurait la possiblité 
+mettre un pari au tournoi.  
+
+1/ jeu de groupe ou chacun pour soi
+2/ on inscrit le nombre de participants 
+3/ nom du tournoi 
+4/ type de jeu (poker, fifa, UNO, Catane, Smash Bro...)
+5/ type de tournoi (direct, poule, classement...)
+6/ optionnel - déterminer un pari 
+	a - déterminer le nombre de gagnants / perdants (1, 2, 3...)
+	b - sélection du type pari (boisson, argent, gage...)
+
+
+Type de paris :
+* nombre de verres à boire 
+* argent 
+* gage 
+* passe le balais toute la semaine 
+
+
+Annexes : 
+possibilité de rajouter un joueur pendant la partie
+enregistrement des points pendant la partie 
+
+S1 Virginie
+S2 Joffrey
+S3 Carolina
+S4 Grischka
+
+POINTS DE VIGILANCE :
+- mettre les appels API dans le fichier services.js
+- ne pas toucher la branche MASTER
+
+
+Backlog : 
+
+- maquette
+- charte graphique (couleurs, polices)
+- découper le site en composants
+- navbarre 
+- footer (mentions légales)
+- logo
+- page d'accueil
+- page paramétrage tournoi
+- page du tournoi en cours
+- page résultats et statistiques
+- bouton de lancement du tournoi (page accueil)
+- page inscription 
+   1/ on détermine si c'est un jeu d'équipe ou solo (option pour choisir les membres de son équipes)
+   2/ on inscrit le nombre de participants 
+   3/ on indique chaque pseudo 
+   4/ on choisit l'avatar
+   5/ on renseigne le nom du tournoi 
+   6/ on choisit le type de jeu (poker, fifa, UNO, Catane, Smash Bro...)
+   7/ type de tournoi (direct, classement...)
+   8/ optionnel - on détermine les paris
+	a - déterminer le nombre de gagnants et/ou de perdants (1, 2, 3...)
+	b - sélection du type récompense ou de gage (boisson, argent, gage...) 
+	c - soit indiquer soi même la récompense/gage dans un champs, sinon roulette au hasard (choix par catégorie)
+
+- page jeu en cours :
+    1/ nom du tournoi
+    2/ affichage des participants (avatar et pseudo)
+    3/ mettre un compteur de points
+    4/ pour le tournoi le gagnant passe l'étape suivante
+    5/ les statistiques sont mises à jour 
+    6/ bouton d'ajout ou de retrait d'un nouveau participant 
+
+- page résultats et stats 
+    1/ en haut le nom du gagnant (avec sa récompense éventuelle)
+    2/ affichage du perdant avec son gage
+    3/ classement des participants (podium)
+    4/ bouton "rejouer" qui renvoie à la page d'accueil
+    
