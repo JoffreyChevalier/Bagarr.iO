@@ -5,7 +5,6 @@ import Formulaire from "@pages/Contact";
 import MentionsLegales from "@pages/Mentions Legales";
 import Tournament from "@pages/Tournament";
 import FinalRanking from "@pages/FinalRanking";
-// import WorkingNavbar from "@components/WorkingNavbar";
 import CreateTournament from "@pages/CreateTournament";
 import Timer from "@pages/Timer";
 import MatchesPage from "@pages/MatchesPage";
